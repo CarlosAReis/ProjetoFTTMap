@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <left>
+            <Pane prefHeight="348.0" prefWidth="194.0" style="-fx-background-color: #5162FF;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="12.0" layoutY="15.0" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: #FBFF40;">
+                     <padding>
+                        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+                     </padding>
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="370.0" prefWidth="170.0">
+                           <content>
+                              <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="170.0" style="-fx-background-color: Yellow;">
+                                 <children>
+                                    <VBox fillWidth="false" prefHeight="614.0" prefWidth="170.0">
+                                       <children>
+                                          <Button id="btnBloco1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 1" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco2" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 2" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco3" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 3" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco4" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 4" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco5" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 5" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco6" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 6" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco7" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 7" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco8" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 8" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnBloco9" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 9" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                          <Button id="btnFTT" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="FTT" textFill="#656060">
+                                             <font>
+                                                <Font name="Arial" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="8.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </Pane>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="161.0" layoutY="4.0" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: White; -fx-border-color: Blue; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="351.0" fitWidth="349.0" layoutX="29.0" layoutY="35.0">
+                     <image>
+                        <Image url="@../images/mapa_ftt_google.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
