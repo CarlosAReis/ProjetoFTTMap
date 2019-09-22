@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="14.0" prefHeight="49.0" prefWidth="320.0" style="-fx-background-color: White; -fx-border-color: #5162FF; -fx-border-width: 3;" text="MENU" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Label>
+            <VBox layoutX="173.0" layoutY="65.0" prefHeight="271.0" prefWidth="254.0" style="-fx-background-color: #FDFF88; -fx-border-color: #5162FF; -fx-border-width: 3;">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="ENTRAR" textFill="#656060">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="CADASTRAR" textFill="#656060">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="197.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="SAIR" textFill="#656060">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="47.0" prefWidth="198.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="DESCONECTAR" textFill="#656060">
+                     <font>
+                        <Font name="Arial" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="25.0" top="15.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
