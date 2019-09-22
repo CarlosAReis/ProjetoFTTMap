@@ -1,28 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: AFC0FB;">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Pane prefHeight="348.0" prefWidth="194.0" style="-fx-background-color: #5162FF;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="12.0" layoutY="15.0" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: #FBFF40;">
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+               </padding>
                <children>
-                  <Label alignment="CENTER" layoutX="175.0" layoutY="14.0" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: white; -fx-border-width: 3; -fx-border-color: #5162FF;" text="FTT" />
-                  <ImageView fitHeight="311.0" fitWidth="224.0" layoutX="97.0" layoutY="63.0">
-                     <image>
-                        <Image url="@../images/mapa_ftt.png" />
-                     </image>
-                  </ImageView>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="370.0" prefWidth="170.0">
+                    <content>
+                      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="170.0" style="-fx-background-color: Yellow;">
+                           <children>
+                              <VBox prefHeight="369.0" prefWidth="170.0">
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 1" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 2" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 3" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 4" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 5" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <Button alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 6" textFill="#656060">
+                                       <font>
+                                          <Font name="Arial" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="8.0" top="13.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
                </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </children>
-</AnchorPane>
+            </Pane>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Pane>
+   </left>
+   <right>
+      <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="346.0" fitWidth="295.0" layoutX="74.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mapa_ftt.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="161.0" layoutY="4.0" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: White; -fx-border-color: Blue; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="381.0" layoutY="4.0" prefHeight="24.0" prefWidth="23.0" style="-fx-background-color: White; -fx-border-width: 2; -fx-border-radius: 20; -fx-background-radius: 20;" text="X">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+         </children>
+   </Pane>
+   </right>
+</BorderPane>
