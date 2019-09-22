@@ -33,17 +33,17 @@
                   </PasswordField>
                </children>
             </VBox>
-            <Button alignment="CENTER" layoutX="197.0" layoutY="210.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="206.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="ENTRAR" textFill="#656060">
+            <Button id="btnEntrar" alignment="CENTER" layoutX="197.0" layoutY="210.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="206.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="ENTRAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="196.0" layoutY="268.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="CADASTRAR" textFill="#656060">
+            <Button alignment="CENTER" layoutX="196.0" layoutY="268.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" styleClass="btnCadastrar" text="CADASTRAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="195.0" layoutY="326.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="SAIR" textFill="#656060">
+            <Button id="btnSair" alignment="CENTER" layoutX="195.0" layoutY="326.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="210.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4;" text="SAIR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
