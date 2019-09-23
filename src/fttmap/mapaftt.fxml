@@ -33,7 +33,7 @@
                            <children>
                               <VBox fillWidth="false" prefHeight="614.0" prefWidth="170.0">
                                  <children>
-                                    <Button id="btnBloco1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 1" textFill="#656060">
+                                    <Button id="btnBloco1" fx:id="btnBloco1" alignment="CENTER" mnemonicParsing="false" onMouseClicked="#onBlocoClick" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 1" textFill="#656060">
                                        <font>
                                           <Font name="Arial" size="21.0" />
                                        </font>
@@ -130,7 +130,7 @@
    <right>
       <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="346.0" fitWidth="295.0" layoutX="74.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imgBloco" fitHeight="346.0" fitWidth="295.0" layoutX="74.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/mapa_ftt.png" />
                </image>

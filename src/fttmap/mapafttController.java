@@ -11,7 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
-import javafx.scene.layout.Background;
+import javafx.scene.image.ImageView;
 
 /**
  *
@@ -20,6 +20,12 @@ import javafx.scene.layout.Background;
 public class mapafttController implements Initializable {
      @FXML
     private Button btnSala82;
+     
+     @FXML
+    private Button btnBloco1;
+    
+     @FXML
+    private ImageView imgBloco;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -30,6 +36,8 @@ public class mapafttController implements Initializable {
         + "-fx-text-fill: orange;");
 
         btnSala82.setTooltip(tt);
+        imgBloco.setVisible(false);
+        btnSala82.setVisible(false);
     }
      @FXML
     void mouseClicked() {
@@ -44,6 +52,11 @@ public class mapafttController implements Initializable {
     @FXML
     void mouseExited() {
 
+    }
+      @FXML
+    void onBlocoClick() {
+        imgBloco.setVisible(true);
+        btnSala82.setVisible(true);
     }
 
 }
