@@ -5,10 +5,41 @@
  */
 package fttmap;
 
+import java.io.IOException;
+import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+
+
 /**
  *
  * @author Caue
  */
 public class tela_loginController {
     
+    private final Stage stage = new Stage();
+    @FXML
+    private void btnEntrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+       
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void btnCadastrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("tela_cadastro.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    private void btnSair_Click(javafx.scene.input.MouseEvent event) throws IOException {
+        Platform.exit();
+    }
 }
