@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
@@ -12,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="pane"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fttmap.tela_cadastroController">
    <center>
       <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
          <children>
@@ -50,7 +55,7 @@
                               <Insets top="15.0" />
                            </VBox.margin>
                         </Label>
-                        <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0">
+                        <ComboBox fx:id="cbTipo" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0">
                            <VBox.margin>
                               <Insets left="70.0" top="5.0" />
                            </VBox.margin>
@@ -63,7 +68,7 @@
                               <Insets top="15.0" />
                            </VBox.margin>
                         </Label>
-                        <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0">
+                        <ComboBox fx:id="cbCurso" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0">
                            <VBox.margin>
                               <Insets left="70.0" top="5.0" />
                            </VBox.margin>
@@ -78,7 +83,7 @@
                                     <Insets left="25.0" right="15.0" top="10.0" />
                                  </HBox.margin>
                               </Label>
-                              <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="107.0">
+                              <ComboBox fx:id="cbSemestre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="107.0">
                                  <HBox.margin>
                                     <Insets top="5.0" />
                                  </HBox.margin>
@@ -97,12 +102,12 @@
                   <Font name="Arial Bold" size="15.0" />
                </font>
             </Label>
-            <Button id="btnRegistrar" alignment="CENTER" layoutX="41.0" layoutY="339.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="REGISTRAR" textFill="#656060">
+            <Button id="btnRegistrar" alignment="CENTER" layoutX="41.0" layoutY="339.0" mnemonicParsing="false" onAction="#btnRegistrarAction" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="REGISTRAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
             </Button>
-            <Button id="btnCancelar" alignment="CENTER" layoutX="342.0" layoutY="340.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CANCELAR" textFill="#656060">
+            <Button id="btnCancelar" fx:id="btnCancelar" alignment="CENTER" layoutX="342.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#closeButtonAction" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CANCELAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
