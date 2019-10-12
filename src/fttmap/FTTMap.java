@@ -5,11 +5,16 @@
  */
 package fttmap;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 /**
  *
@@ -19,6 +24,7 @@ public class FTTMap extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
+        
         Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
         
         Scene scene = new Scene(root);
@@ -32,6 +38,13 @@ public class FTTMap extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+    
+    public static void test() throws Exception {
+        
+//        FileInputStream file = new FileInputStream(new File(""));
+//        Workbook workbook = new XSSFWorkbook(file);
+
     }
     
 }
