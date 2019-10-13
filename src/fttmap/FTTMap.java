@@ -27,7 +27,7 @@ public class FTTMap extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-//        Excel.test();
+        Excel.test();
         
         Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
         
