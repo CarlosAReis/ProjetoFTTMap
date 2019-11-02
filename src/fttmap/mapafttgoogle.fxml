@@ -12,7 +12,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
@@ -30,7 +29,7 @@
                                  <children>
                                     <VBox fillWidth="false" prefHeight="614.0" prefWidth="170.0">
                                        <children>
-                                          <Button id="btnBloco1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 1" textFill="#656060">
+                                          <Button id="btnBloco1" fx:id="btnBloco1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 1" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -38,7 +37,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco2" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 2" textFill="#656060">
+                                          <Button id="btnBloco2" fx:id="btnBloco2" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 2" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -46,7 +45,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco3" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 3" textFill="#656060">
+                                          <Button id="btnBloco3" fx:id="btnBloco3" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 3" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -54,7 +53,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco4" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 4" textFill="#656060">
+                                          <Button id="btnBloco4" fx:id="btnBloco4" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 4" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -62,7 +61,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco5" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 5" textFill="#656060">
+                                          <Button id="btnBloco5" fx:id="btnBloco5" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 5" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -70,7 +69,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco6" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 6" textFill="#656060">
+                                          <Button id="btnBloco6" fx:id="btnBloco6" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 6" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -78,7 +77,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco7" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 7" textFill="#656060">
+                                          <Button id="btnBloco7" fx:id="btnBloco7" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 7" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -86,7 +85,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco8" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 8" textFill="#656060">
+                                          <Button id="btnBloco8" fx:id="btnBloco8" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 8" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -94,7 +93,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco9" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="BLOCO 9" textFill="#656060">
+                                          <Button id="btnBloco9" fx:id="btnBloco9" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 9" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -102,7 +101,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnFTT" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4;" text="FTT" textFill="#656060">
+                                          <Button id="btnFTT" fx:id="btnFTT" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -127,16 +126,86 @@
          <right>
             <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER" layoutX="161.0" layoutY="4.0" prefHeight="27.0" prefWidth="88.0" style="-fx-background-color: White; -fx-border-color: Blue; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT">
+                  <Label id="lbMapa" alignment="CENTER" layoutX="131.0" layoutY="6.0" prefHeight="27.0" prefWidth="139.0" style="-fx-background-color: White; -fx-border-width: 2; -fx-background-radius: 27;" text="CEFSA">
                      <font>
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="351.0" fitWidth="349.0" layoutX="29.0" layoutY="35.0">
+                  <ImageView fitHeight="340.0" fitWidth="337.0" layoutX="32.0" layoutY="39.0">
                      <image>
                         <Image url="@../images/mapa_ftt_google.png" />
                      </image>
                   </ImageView>
+                  <Button id="btnSair" fx:id="btnSair" layoutX="374.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: white; -fx-background-radius: 27;" text="X" />
+                  <Pane layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="342.0" fitWidth="343.0" layoutX="-1.0">
+                           <image>
+                              <Image url="@../images/bloco_ftt.png" />
+                           </image>
+                        </ImageView>
+                        <Pane id="pn83" fx:id="pn83" layoutX="203.0" layoutY="65.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="8.0" layoutY="6.0" text="83" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn79" fx:id="pn79" layoutX="203.0" layoutY="190.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="79" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn75" fx:id="pn75" layoutX="203.0" layoutY="265.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="75" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn76" fx:id="pn76" layoutX="114.0" layoutY="223.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="76" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn80" fx:id="pn80" layoutX="114.0" layoutY="87.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="6.0" text="80" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn81" fx:id="pn81" layoutX="203.0" layoutY="98.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="81" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn84" fx:id="pn84" layoutX="114.0" layoutY="5.0" prefHeight="28.0" prefWidth="29.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="8.0" layoutY="6.0" text="84" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn82" fx:id="pn82" layoutX="114.0" layoutY="46.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="82" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn78" fx:id="pn78" layoutX="114.0" layoutY="182.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="78" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn77" fx:id="pn77" layoutX="203.0" layoutY="227.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="7.0" layoutY="5.0" text="77" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn85" fx:id="pn85" layoutX="203.0" layoutY="6.0" prefHeight="54.0" prefWidth="39.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="13.0" layoutY="19.0" text="85" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn74" fx:id="pn74" layoutX="104.0" layoutY="306.0" prefHeight="28.0" prefWidth="43.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label layoutX="16.0" layoutY="5.0" text="74" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
                </children>
             </Pane>
          </right>

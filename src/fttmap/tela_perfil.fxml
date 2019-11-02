@@ -7,7 +7,6 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -20,7 +19,7 @@
                <children>
                   <VBox prefHeight="251.0" prefWidth="248.0">
                      <children>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="RA/CHAPA" text="081170002">
+                        <TextField id="tbRA" fx:id="tbRA" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="RA">
                            <VBox.margin>
                               <Insets left="20.0" top="30.0" />
                            </VBox.margin>
@@ -28,12 +27,12 @@
                               <Font name="Arial Bold" size="12.0" />
                            </font>
                         </TextField>
-                        <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="SENHA" text="password">
+                        <PasswordField id="tbSenha" fx:id="tbSenha" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="SENHA">
                            <VBox.margin>
                               <Insets left="20.0" top="30.0" />
                            </VBox.margin>
                         </PasswordField>
-                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="NOME" text="Silvio Santos">
+                        <TextField id="tbNome" fx:id="tbNome" editable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="NOME">
                            <VBox.margin>
                               <Insets left="20.0" top="30.0" />
                            </VBox.margin>
@@ -42,72 +41,35 @@
                   </VBox>
                   <VBox layoutX="289.0" prefHeight="240.0" prefWidth="286.0">
                      <children>
-                        <Label alignment="CENTER" prefHeight="20.0" prefWidth="292.0" text="TIPO">
-                           <font>
-                              <Font name="Arial Bold" size="16.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="15.0" />
-                           </VBox.margin>
-                        </Label>
-                        <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="ALUNO">
-                           <VBox.margin>
-                              <Insets left="70.0" top="5.0" />
-                           </VBox.margin>
-                        </ComboBox>
                         <Label alignment="CENTER" prefHeight="20.0" prefWidth="292.0" text="CURSO">
                            <font>
                               <Font name="Arial Bold" size="16.0" />
                            </font>
                            <VBox.margin>
-                              <Insets top="15.0" />
+                              <Insets top="80.0" />
                            </VBox.margin>
                         </Label>
-                        <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0" promptText="EC">
+                        <ComboBox id="cbCurso" fx:id="cbCurso" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="166.0" visibleRowCount="5">
                            <VBox.margin>
-                              <Insets left="70.0" top="5.0" />
+                              <Insets left="60.0" top="10.0" />
                            </VBox.margin>
                         </ComboBox>
-                        <HBox prefHeight="43.0" prefWidth="246.0">
-                           <children>
-                              <Label text="SEMESTRE">
-                                 <font>
-                                    <Font name="Arial Bold" size="16.0" />
-                                 </font>
-                                 <HBox.margin>
-                                    <Insets left="25.0" right="15.0" top="10.0" />
-                                 </HBox.margin>
-                              </Label>
-                              <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="107.0" promptText="1º">
-                                 <HBox.margin>
-                                    <Insets top="5.0" />
-                                 </HBox.margin>
-                              </ComboBox>
-                           </children>
-                           <VBox.margin>
-                              <Insets top="25.0" />
-                           </VBox.margin>
-                        </HBox>
-                        <Button mnemonicParsing="false" text="EDITAR">
-                           <VBox.margin>
-                              <Insets left="180.0" top="8.0" />
-                           </VBox.margin>
-                        </Button>
                      </children>
                   </VBox>
+                  <Button id="btnEditar" fx:id="btnEditar" layoutX="248.0" layoutY="108.0" mnemonicParsing="false" text="EDITAR" />
                </children>
             </Pane>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="90.0" layoutY="14.0" prefHeight="49.0" prefWidth="421.0" style="-fx-background-color: White; -fx-border-color: #5162FF; -fx-border-width: 3; -fx-background-radius: 5; -fx-border-radius: 5;" text="PERFIL" textAlignment="CENTER">
                <font>
-                  <Font name="Arial Bold" size="15.0" />
+                  <Font name="Arial" size="21.0" />
                </font>
             </Label>
-            <Button id="btnSalvar" alignment="CENTER" layoutX="41.0" layoutY="339.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="SALVAR" textFill="#656060">
+            <Button id="btnSalvar" fx:id="btnSalvar" alignment="CENTER" layoutX="73.0" layoutY="333.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="SALVAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
             </Button>
-            <Button id="btnCancelar" alignment="CENTER" layoutX="342.0" layoutY="340.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CANCELAR" textFill="#656060">
+            <Button id="btnCancelar" fx:id="btnCancelar" alignment="CENTER" layoutX="337.0" layoutY="333.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CANCELAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
