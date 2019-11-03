@@ -5,7 +5,6 @@
  */
 package fttmap;
 
-import DAO.Excel;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +26,6 @@ public class FTTMap extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-        Excel.test();
         
         Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
         
