@@ -32,8 +32,8 @@ public class tela_loginController {
         stage.show();
     }
     @FXML
-    private void btnCadastrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("tela_cadastro.fxml"));
+    private void btnEntrarADM_Click(javafx.scene.input.MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

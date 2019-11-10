@@ -17,6 +17,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -25,12 +26,18 @@ import javafx.stage.Stage;
  * @author Caue
  */
 public class menuController implements Initializable {
+    
+     @FXML
+    private ComboBox<String> cbSemestre;
 
     @FXML
     private Button btnMapa;
 
     @FXML
     private Button btnDesconectar;
+    
+    @FXML
+    private Button btnCadastrarAluno;
 
     @FXML
     private Button btnPerfil;
@@ -44,13 +51,21 @@ public class menuController implements Initializable {
     @FXML
     void onActionMapa() throws IOException {
          
-        Parent root = FXMLLoader.load(getClass().getResource("mapaftt.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("mapafttgoogle.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
+    
+    @FXML
+    void onActionCadastrarAluno() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("tela_cadastro.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     @FXML
     void onActionPerfil() throws IOException {
@@ -61,12 +76,14 @@ public class menuController implements Initializable {
         stage.show();
     }
 
-
     @FXML
-    void onActionPesquisar() {
-
+    void onActionPesquisar() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("tela_pesquisa.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
-
 
     @FXML
     void onActionDesconectar() {
@@ -82,6 +99,17 @@ public class menuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        
+        cbSemestre.getItems().add("1º");
+        cbSemestre.getItems().add("2º");
+        cbSemestre.getItems().add("3º");
+        cbSemestre.getItems().add("4º");
+        cbSemestre.getItems().add("5º");
+        cbSemestre.getItems().add("6º");
+        cbSemestre.getItems().add("7º");
+        cbSemestre.getItems().add("8º");
+        cbSemestre.getItems().add("9º");
+        cbSemestre.getItems().add("10º");
         
     }
     

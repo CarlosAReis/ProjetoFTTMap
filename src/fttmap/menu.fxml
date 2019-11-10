@@ -36,7 +36,7 @@
                         <Insets left="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnPesquisar" alignment="CENTER" mnemonicParsing="false" onAction="#onActionDesconectar" prefHeight="47.0" prefWidth="198.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="PESQUISAR" textFill="#656060">
+                  <Button fx:id="btnPesquisar" alignment="CENTER" mnemonicParsing="false" onAction="#onActionPesquisar" prefHeight="47.0" prefWidth="198.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="PESQUISAR" textFill="#656060">
                      <font>
                         <Font name="Arial" size="21.0" />
                      </font>
@@ -54,7 +54,7 @@
                   </Button>
                </children>
             </VBox>
-            <Button id="btnCadastrarAluno" fx:id="btnCadastrarAluno" alignment="CENTER" layoutX="418.0" layoutY="100.0" mnemonicParsing="false" onAction="#onActionPesquisar" prefHeight="100.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CADASTRARALUNO" textAlignment="CENTER" textFill="#656060" wrapText="true">
+            <Button id="btnCadastrarAluno" fx:id="btnCadastrarAluno" alignment="CENTER" layoutX="418.0" layoutY="100.0" mnemonicParsing="false" onAction="#onActionCadastrarAluno" prefHeight="100.0" prefWidth="168.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CADASTRARALUNO" textAlignment="CENTER" textFill="#656060" wrapText="true">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>

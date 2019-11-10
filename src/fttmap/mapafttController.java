@@ -54,7 +54,7 @@ public class mapafttController implements Initializable {
 
     }
       @FXML
-    void onBlocoClick() {
+    void onBlocoFTTClick() {
         imgBloco.setVisible(true);
         btnSala82.setVisible(true);
     }

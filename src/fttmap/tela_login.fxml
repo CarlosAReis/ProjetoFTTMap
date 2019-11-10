@@ -38,7 +38,7 @@
                   <Font name="Arial" size="21.0" />
                </font>
             </Button>
-            <Button id="btnEntrarADM" fx:id="btnEntrarADM" alignment="CENTER" layoutX="196.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#btnCadastrar_Click" prefHeight="47.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="  ENTRAR COMO ADMINISTRADOR" textFill="#656060">
+            <Button id="btnEntrarADM" fx:id="btnEntrarADM" alignment="CENTER" layoutX="196.0" layoutY="268.0" mnemonicParsing="false" onMouseClicked="#btnEntrarADM_Click" prefHeight="47.0" prefWidth="209.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="  ENTRAR COMO ADMINISTRADOR" textFill="#656060">
                <font>
                   <Font name="Arial" size="11.0" />
                </font>

@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fttmap.mapafttgoogleController">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <left>
@@ -29,7 +29,7 @@
                                  <children>
                                     <VBox fillWidth="false" prefHeight="614.0" prefWidth="170.0">
                                        <children>
-                                          <Button id="btnBloco1" fx:id="btnBloco1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 1" textFill="#656060">
+                                          <Button id="btnBloco1" fx:id="btnBloco1" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco1Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 1" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -37,7 +37,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco2" fx:id="btnBloco2" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 2" textFill="#656060">
+                                          <Button id="btnBloco2" fx:id="btnBloco2" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco2Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 2" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -45,7 +45,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco3" fx:id="btnBloco3" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 3" textFill="#656060">
+                                          <Button id="btnBloco3" fx:id="btnBloco3" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco3Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 3" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -53,7 +53,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco4" fx:id="btnBloco4" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 4" textFill="#656060">
+                                          <Button id="btnBloco4" fx:id="btnBloco4" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco4Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 4" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -61,7 +61,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco5" fx:id="btnBloco5" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 5" textFill="#656060">
+                                          <Button id="btnBloco5" fx:id="btnBloco5" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco5Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 5" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -69,7 +69,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco6" fx:id="btnBloco6" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 6" textFill="#656060">
+                                          <Button id="btnBloco6" fx:id="btnBloco6" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco6Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 6" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -77,7 +77,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco7" fx:id="btnBloco7" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 7" textFill="#656060">
+                                          <Button id="btnBloco7" fx:id="btnBloco7" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco7Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 7" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -85,7 +85,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco8" fx:id="btnBloco8" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 8" textFill="#656060">
+                                          <Button id="btnBloco8" fx:id="btnBloco8" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco8Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 8" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -93,7 +93,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnBloco9" fx:id="btnBloco9" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 9" textFill="#656060">
+                                          <Button id="btnBloco9" fx:id="btnBloco9" alignment="CENTER" mnemonicParsing="false" onAction="#onBloco9Click" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="BLOCO 9" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -101,7 +101,7 @@
                                                 <Insets left="8.0" top="13.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button id="btnFTT" fx:id="btnFTT" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT" textFill="#656060">
+                                          <Button id="btnFTT" fx:id="btnFTT" alignment="CENTER" mnemonicParsing="false" onAction="#onBlocoFTTClick" prefHeight="40.0" prefWidth="141.0" style="-fx-background-color: #FFFFFF; -fx-border-color: Blue; -fx-border-width: 4; -fx-border-radius: 5; -fx-background-radius: 5;" text="FTT" textFill="#656060">
                                              <font>
                                                 <Font name="Arial" size="21.0" />
                                              </font>
@@ -136,8 +136,88 @@
                         <Image url="@../images/mapa_ftt_google.png" />
                      </image>
                   </ImageView>
-                  <Button id="btnSair" fx:id="btnSair" layoutX="374.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="27.0" style="-fx-background-color: white; -fx-background-radius: 27;" text="X" />
-                  <Pane layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                  <Pane id="pnBloco1" fx:id="pnBloco1" layoutX="31.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco2" fx:id="pnBloco2" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco3" fx:id="pnBloco3" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco4" fx:id="pnBloco4" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco5" fx:id="pnBloco5" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco6" fx:id="pnBloco6" layoutX="40.0" layoutY="48.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco7" fx:id="pnBloco7" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco8" fx:id="pnBloco8" layoutX="30.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnBloco9" fx:id="pnBloco9" layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
+                     <children>
+                        <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
+                           <image>
+                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="pnFTT" fx:id="pnFTT" layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
                      <children>
                         <ImageView fitHeight="342.0" fitWidth="343.0" layoutX="-1.0">
                            <image>

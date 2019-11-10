@@ -31,12 +31,9 @@ import javafx.stage.StageStyle;
  * @author Caue
  */
 public class tela_cadastroController implements Initializable  {
-    @FXML
-    private ComboBox<String> cbTipo;
+    
     @FXML
     private ComboBox<String> cbCurso;
-     @FXML
-    private ComboBox<String> cbSemestre;
     @FXML
     private BorderPane pane;
     private int cadastrado = 0;
@@ -46,23 +43,12 @@ public class tela_cadastroController implements Initializable  {
        Carregar();
     }
     public void Carregar(){
-       
-        cbTipo.getItems().add("Aluno");
-        cbTipo.getItems().add("Professor");
+        
         cbCurso.getItems().add("EC");
         cbCurso.getItems().add("ECA"); 
         cbCurso.getItems().add("EAL");
         cbCurso.getItems().add("ADM");
-        cbSemestre.getItems().add("1º");
-        cbSemestre.getItems().add("2º");
-        cbSemestre.getItems().add("3º");
-        cbSemestre.getItems().add("4º");
-        cbSemestre.getItems().add("5º");
-        cbSemestre.getItems().add("6º");
-        cbSemestre.getItems().add("7º");
-        cbSemestre.getItems().add("8º");
-        cbSemestre.getItems().add("9º");
-        cbSemestre.getItems().add("10º");
+        
     }
     @FXML
     void btnRegistrarAction() {
