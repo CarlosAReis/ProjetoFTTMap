@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
@@ -25,11 +26,19 @@ public class tela_loginController {
     private final Stage stage = new Stage();
     @FXML
     private void btnEntrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
+        
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
        
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        
+        
+        // PODE SER ISSO
+//        stage.initModality(Modality.WINDOW_MODAL);
+//        stage.initOwner(stage.getScene().getWindow());
+//        stage.setScene(scene);
+//        stage.show();
     }
     @FXML
     private void btnEntrarADM_Click(javafx.scene.input.MouseEvent event) throws IOException {
