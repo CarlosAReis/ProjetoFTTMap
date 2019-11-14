@@ -35,6 +35,22 @@ public class Excel {
             workbook = Workbook.getWorkbook(new File(path + "\\csv\\" + semester + ".xls"));
 
             Sheet sheet = workbook.getSheet(0);
+            // row, line
+            Integer diaSemana = 0;
+            Integer disciplina = 1;
+            Integer inicio = 2;
+            Integer termino = 3;
+            Integer professor = 4;
+            Integer sala = 5;
+            
+            
+            for (Integer i = 1; i < 25; i++) {
+                
+            }
+            
+            
+            
+            
             Cell cell1 = sheet.getCell(0, 0);
             System.out.print(cell1.getContents() + ":");    // Test Count + :
             Cell cell2 = sheet.getCell(0, 1);
