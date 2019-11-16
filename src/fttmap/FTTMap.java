@@ -6,35 +6,28 @@
 package fttmap;
 
 import DAO.Excel;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
  *
- * @author CarlosAugusto
+ * @author jojok
  */
 public class FTTMap extends Application {
     
     @Override
-    public void start(Stage stage) throws Exception {
-        
+    public void start(final Stage stage) throws IOException {
         Excel.read("EC6");
-//        Excel.write();
-        
-        Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
-        
-        Scene scene = new Scene(root);
-        
+        // Excel.write();
+
+        final Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
+
+        final Scene scene = new Scene(root);
+
         stage.setScene(scene);
         stage.show();
     }
@@ -42,7 +35,7 @@ public class FTTMap extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         launch(args);
     }
     

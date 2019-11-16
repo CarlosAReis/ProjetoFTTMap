@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - FTTMAP",
+            "request": "launch",
+            "mainClass": "fttmap.FTTMAP"
+        }
+    ]
+}
