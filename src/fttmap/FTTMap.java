@@ -6,6 +6,7 @@
 package fttmap;
 
 import DAO.Excel;
+import Service.ExcelController;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,8 +22,8 @@ public class FTTMap extends Application {
     
     @Override
     public void start(final Stage stage) throws IOException {
-        Excel.read("EC6");
-        // Excel.write();
+        ExcelController.loadExcelData("EC6");
+//         Excel.write();
 
         final Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
 

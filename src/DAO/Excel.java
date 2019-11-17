@@ -14,6 +14,8 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import jxl.write.Label;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
@@ -25,7 +27,7 @@ import jxl.write.WriteException;
  */
 public class Excel {
     
-    private static final String EXCEL_FILE_LOCATION = "C:\\test\\MyFirstExcel.xls";
+    private static String EXCEL_FILE_LOCATION = "C:\\test\\MyFirstExcel.xls";
     
     private static final Integer diaSemana = 0;
     private static final Integer disciplina = 1;
@@ -43,6 +45,8 @@ public class Excel {
     
     private static Boolean hasSaturday;
     
+    private static String path;
+    
     static {
         diaSemanaList = new ArrayList<String>();
         disciplinaList = new ArrayList<String>();
@@ -51,6 +55,12 @@ public class Excel {
         professorList = new ArrayList<String>();
         salaList = new ArrayList<String>();
         hasSaturday = true;
+        try {
+            path = new File(".").getCanonicalPath();
+            EXCEL_FILE_LOCATION = String.valueOf(path) + "\\csv\\newCsv.xls";
+        } catch (IOException ex) {
+            Logger.getLogger(Excel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public static void read(String semester) {
@@ -58,14 +68,9 @@ public class Excel {
         Workbook workbook = null;
         try {
             
-            String path = new File(".").getCanonicalPath();
-
             workbook = Workbook.getWorkbook(new File(path + "\\csv\\" + semester + ".xls"));
-
             Sheet sheet = workbook.getSheet(0);
-            
             // column, line
-            
             Integer rowLimit = 23;
             try {
                 sheet.getCell(diaSemana, rowLimit - 1);
@@ -73,49 +78,39 @@ public class Excel {
                 hasSaturday = false;
                 rowLimit = 21;
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 diaSemanaList.add(sheet.getCell(diaSemana, i).getContents());
                 System.out.println(sheet.getCell(diaSemana, i).getContents());
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 disciplinaList.add(sheet.getCell(disciplina, i).getContents());
                 System.out.println(sheet.getCell(disciplina, i).getContents());
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 horaInicioList.add(sheet.getCell(horaInicio, i).getContents());
                 System.out.println(sheet.getCell(horaInicio, i).getContents());
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 horaTerminoList.add(sheet.getCell(horaTermino, i).getContents());
                 System.out.println(sheet.getCell(horaTermino, i).getContents());
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 professorList.add(sheet.getCell(professor, i).getContents());
                 System.out.println(sheet.getCell(professor, i).getContents());
             }
-            
             for (Integer i = 1; i < rowLimit; i++) {
                 salaList.add(sheet.getCell(sala, i).getContents());
                 System.out.println(sheet.getCell(sala, i).getContents());
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } catch (BiffException e) {
             e.printStackTrace();
         } finally {
-
             if (workbook != null) {
                 workbook.close();
             }
-
         }
-
     }
     
     public enum Day {
@@ -171,6 +166,7 @@ public class Excel {
         return m;
     }
     
+    // USED TO CREATE NEW EXCEL SHEETS TO USE DUE TO VERSION
     public static void write() {
 
         //1. Create an Excel file
