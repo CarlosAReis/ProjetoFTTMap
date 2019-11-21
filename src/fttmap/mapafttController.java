@@ -29,7 +29,7 @@ public class mapafttController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-          Tooltip tt = new Tooltip();
+        Tooltip tt = new Tooltip();
         tt.setText("Text on Hover");
         tt.setStyle("-fx-font: normal bold 24 Langdon; "
         + "-fx-base: #AE3522; "

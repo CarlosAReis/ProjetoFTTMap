@@ -4,8 +4,7 @@
  * and open the template in the editor.
  */
 package fttmap;
-
-import DAO.Excel;
+import Enums.Repositories;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -21,13 +20,10 @@ public class FTTMap extends Application {
     
     @Override
     public void start(final Stage stage) throws IOException {
-        Excel.read("EC6");
-        // Excel.write();
-
-        final Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
-
-        final Scene scene = new Scene(root);
-
+        
+        Config.Config.getInstance().setDatabase(Repositories.MYSQL);
+        Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
