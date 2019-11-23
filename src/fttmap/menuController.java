@@ -5,9 +5,11 @@
  */
 package fttmap;
 
+import Service.ExcelController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,6 +21,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -27,8 +30,14 @@ import javafx.stage.Stage;
  */
 public class menuController implements Initializable {
     
-     @FXML
+    @FXML
     private ComboBox<String> cbSemestre;
+    
+    @FXML
+    private ComboBox<String> cbCurso;
+    
+    @FXML
+    private Pane pnCurso;
 
     @FXML
     private Button btnMapa;
@@ -100,17 +109,43 @@ public class menuController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        cbSemestre.getItems().add("1º");
-        cbSemestre.getItems().add("2º");
-        cbSemestre.getItems().add("3º");
-        cbSemestre.getItems().add("4º");
-        cbSemestre.getItems().add("5º");
-        cbSemestre.getItems().add("6º");
-        cbSemestre.getItems().add("7º");
-        cbSemestre.getItems().add("8º");
-        cbSemestre.getItems().add("9º");
-        cbSemestre.getItems().add("10º");
+        boolean userIsAdmin = false;
         
+        if (userIsAdmin) {
+            pnCurso.setVisible(true);
+            cbCurso.getItems().add("EC");
+            cbCurso.getItems().add("ECA");
+            cbCurso.getItems().add("EA");
+            cbCurso.getItems().add("ADM");
+        }
+        
+        cbSemestre.getItems().add("1");
+        cbSemestre.getItems().add("2");
+        cbSemestre.getItems().add("3");
+        cbSemestre.getItems().add("4");
+        cbSemestre.getItems().add("5");
+        cbSemestre.getItems().add("6");
+        cbSemestre.getItems().add("7");
+        cbSemestre.getItems().add("8");
+        cbSemestre.getItems().add("9");
+        cbSemestre.getItems().add("10");
+        
+    }
+    
+    private void comboAction(ActionEvent event) {
+        
+        String curso;
+                
+        boolean userIsAdmin = false;
+        
+        if (userIsAdmin) {
+            curso = cbCurso.getSelectionModel().getSelectedItem();
+        } else {
+            curso = "EC";
+        }
+
+        ExcelController.loadExcelData(curso + cbSemestre.getValue());
+
     }
     
     

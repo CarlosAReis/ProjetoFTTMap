@@ -5,7 +5,15 @@
  */
 package fttmap;
 
+import DAO.Excel;
+import Service.ExcelController;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -14,7 +22,77 @@ import javafx.scene.layout.Pane;
  *
  * @author Caue
  */
-public class mapafttgoogleController {
+public class mapafttgoogleController implements Initializable {
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        String dayOfWeek = getDate();
+        String[][] dayMatrix = null;
+        
+        switch (dayOfWeek) {
+            case "Monday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.MONDAY);
+                break;
+            case "Tuesday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
+                break;
+            case "Wednesday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
+                break;
+            case "Thursday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
+                break;
+            case "Friday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
+                break;
+            case "Saturday" :
+                dayMatrix = ExcelController.getDayMatrix(Excel.Day.SATURDAY);
+                break;
+        }
+        
+        if (dayMatrix != null) {
+            Calendar now = Calendar.getInstance();
+            now.get(Calendar.HOUR_OF_DAY);
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/M/yyyy");
+            
+            String today = sdf.format(new Date());
+            
+            String numeroSala = "";
+            
+            for (Integer i = 0; i < 4; i++) {
+                SimpleDateFormat timeBegin = new SimpleDateFormat(today + " " + dayMatrix[i][Excel.horaInicio] + ":00");
+                SimpleDateFormat timeEnd = new SimpleDateFormat(today + " " + dayMatrix[i][Excel.horaTermino] + ":00");
+                if (now.before(timeBegin)) {
+                    numeroSala = dayMatrix[i][Excel.sala];
+                    break;
+                } else if (now.before(timeEnd)) {
+                    numeroSala = dayMatrix[i][Excel.sala];
+                    break;
+                }
+            }
+            
+            // get panel with classroom number
+        }
+        
+    }
+    
+ 
+    public static String getDate() {
+ 
+        Date now = new Date();
+ 
+        SimpleDateFormat simpleDateformat = new SimpleDateFormat("E"); // the day of the week abbreviated
+//        System.out.println(simpleDateformat.format(now));
+ 
+        simpleDateformat = new SimpleDateFormat("EEEE"); // the day of the week spelled out completely
+        return simpleDateformat.format(now);
+ 
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(now);
+//        System.out.println(calendar.get(Calendar.DAY_OF_WEEK)); // the day of the week in numerical format
+ 
+    }
     
     @FXML
     private Button btnBloco1;

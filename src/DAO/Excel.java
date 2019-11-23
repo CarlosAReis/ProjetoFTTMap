@@ -28,12 +28,12 @@ public class Excel {
     
     private static String EXCEL_FILE_LOCATION = "C:\\test\\MyFirstExcel.xls";
     
-    private static final Integer diaSemana = 0;
-    private static final Integer disciplina = 1;
-    private static final Integer horaInicio = 2;
-    private static final Integer horaTermino = 3;
-    private static final Integer professor = 4;
-    private static final Integer sala = 5;
+    public static final Integer diaSemana = 0;
+    public static final Integer disciplina = 1;
+    public static final Integer horaInicio = 2;
+    public static final Integer horaTermino = 3;
+    public static final Integer professor = 4;
+    public static final Integer sala = 5;
     
     private static List<String> diaSemanaList;
     private static List<String> disciplinaList;

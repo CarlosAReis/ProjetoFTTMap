@@ -30,7 +30,7 @@ import javafx.stage.StageStyle;
  *
  * @author Caue
  */
-public class tela_cadastroController implements Initializable  {
+public class tela_cadastroController implements Initializable {
     
     @FXML
     private ComboBox<String> cbCurso;
