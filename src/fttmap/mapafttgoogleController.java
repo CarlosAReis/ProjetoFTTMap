@@ -7,6 +7,7 @@ package fttmap;
 
 import DAO.Excel;
 import Service.ExcelController;
+import com.sun.java.accessibility.util.EventID;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,13 +16,18 @@ import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Control;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
@@ -97,9 +103,15 @@ public class mapafttgoogleController implements Initializable {
 //            System.out.println("now => " + now.toString());
                     if (now.isBefore(timeBegin.getTime())) {
                         numeroSala = dayMatrix[i][Excel.sala];
+                        aula = dayMatrix[i][Excel.disciplina];
+                        professor = dayMatrix[i][Excel.professor];
+                        horario = dayMatrix[i][Excel.horaInicio];
                         break;
                     } else if (now.isBefore(timeEnd.getTime())) {
                         numeroSala = dayMatrix[i][Excel.sala];
+                        aula = dayMatrix[i][Excel.disciplina];
+                        professor = dayMatrix[i][Excel.professor];
+                        horario = dayMatrix[i][Excel.horaInicio];
                         break;
                     }
                 }
@@ -112,10 +124,13 @@ public class mapafttgoogleController implements Initializable {
             
             if (!numeroSala.isEmpty()) {
                 Pane pn = getClassroomPaneInstance(numeroSala);
+                Label lb = getClassroomLabelInstance(numeroSala);
                 if (pn != null) {
                     BackgroundFill backgroundFill = new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY);
                     Background bg = new Background(backgroundFill);
                     pn.setBackground(bg);
+                    pn.addEventHandler(MouseEvent.MOUSE_MOVED, new GetIdEventHandler());
+                    lb.addEventHandler(MouseEvent.MOUSE_MOVED, new GetIdEventHandler());
                     getBlocoPaneByClassroomNumber(numeroSala).setVisible(true);
                 } else {
                     Alert alert = new Alert(Alert.AlertType.WARNING, "O bloco para a sala " + numeroSala + " não está implementado!", ButtonType.OK);
@@ -123,9 +138,26 @@ public class mapafttgoogleController implements Initializable {
                 }
             }
         }
-        
     }
     
+    private class GetIdEventHandler implements EventHandler<Event>{
+        @Override
+        public void handle(Event evt) {
+            Alert alert = new Alert(Alert.AlertType.NONE, aula + "\n" + professor + "\n" + horario, ButtonType.OK);
+            alert.showAndWait();
+           System.out.println(((Control)evt.getSource()).getId());
+        }
+    }
+    
+    String aula;
+    String professor;
+    String horario;
+    
+//    @FXML
+//    void onPaneSalaClick() {
+//        Alert alert = new Alert(Alert.AlertType.NONE, aula + "\n" + professor + "\n" + horario, ButtonType.OK);
+//        alert.showAndWait();
+//    }
  
     public static String getDate() {
  
@@ -223,6 +255,41 @@ public class mapafttgoogleController implements Initializable {
         return null;
     }
     
+    private Label getClassroomLabelInstance(String number) {
+        
+        switch (number) {
+            case "74":
+                return lbl74;
+            case "75":
+                return lbl75;
+            case "76":
+                return lbl76;
+            case "77":
+                return lbl77;
+            case "78":
+                return lbl78;
+            case "79":
+                return lbl79;
+            case "80":
+                return lbl80;
+            case "81":
+                return lbl81;
+            case "82":
+                return lbl82;
+            case "83":
+                return lbl83;
+            case "84":
+                return lbl84;
+            case "85":
+                return lbl85;
+            case "87":
+                return lbl87;
+            case "88":
+                return lbl88;
+        }
+        return null;
+    }
+    
     @FXML
     private Pane pn74;
     @FXML
@@ -251,6 +318,34 @@ public class mapafttgoogleController implements Initializable {
     private Pane pn87;
     @FXML
     private Pane pn88;
+    @FXML
+    private Label lbl74;
+    @FXML
+    private Label lbl75;
+    @FXML
+    private Label lbl76;
+    @FXML
+    private Label lbl77;
+    @FXML
+    private Label lbl78;
+    @FXML
+    private Label lbl79;
+    @FXML
+    private Label lbl80;
+    @FXML
+    private Label lbl81;
+    @FXML
+    private Label lbl82;
+    @FXML
+    private Label lbl83;
+    @FXML
+    private Label lbl84;
+    @FXML
+    private Label lbl85;
+    @FXML
+    private Label lbl87;
+    @FXML
+    private Label lbl88;
     
     void setAllNotVisible() {
         pnBloco1.setVisible(false);
