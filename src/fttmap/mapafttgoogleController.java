@@ -18,6 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.Event;
 import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -109,6 +110,7 @@ public class mapafttgoogleController implements Initializable {
                         break;
                     } else if (now.isBefore(timeEnd.getTime())) {
                         numeroSala = dayMatrix[i][Excel.sala];
+                        sala = numeroSala;
                         aula = dayMatrix[i][Excel.disciplina];
                         professor = dayMatrix[i][Excel.professor];
                         horario = dayMatrix[i][Excel.horaInicio];
@@ -129,9 +131,12 @@ public class mapafttgoogleController implements Initializable {
                     BackgroundFill backgroundFill = new BackgroundFill(Color.GREEN, CornerRadii.EMPTY, Insets.EMPTY);
                     Background bg = new Background(backgroundFill);
                     pn.setBackground(bg);
-                    pn.addEventHandler(MouseEvent.MOUSE_MOVED, new GetIdEventHandler());
-                    lb.addEventHandler(MouseEvent.MOUSE_MOVED, new GetIdEventHandler());
-                    getBlocoPaneByClassroomNumber(numeroSala).setVisible(true);
+//                    pn.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
+                    lb.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
+                    Pane blocoPane = getBlocoPaneByClassroomNumber(numeroSala);
+                    if (blocoPane != null) {
+                        blocoPane.setVisible(true);
+                    }
                 } else {
                     Alert alert = new Alert(Alert.AlertType.WARNING, "O bloco para a sala " + numeroSala + " não está implementado!", ButtonType.OK);
                     alert.showAndWait();
@@ -143,7 +148,7 @@ public class mapafttgoogleController implements Initializable {
     private class GetIdEventHandler implements EventHandler<Event>{
         @Override
         public void handle(Event evt) {
-            Alert alert = new Alert(Alert.AlertType.NONE, aula + "\n" + professor + "\n" + horario, ButtonType.OK);
+            Alert alert = new Alert(Alert.AlertType.NONE,"Aula: " + aula + "\nProfessor: " + professor + "\nHorário: " + horario + "\nSala: " + sala, ButtonType.OK);
             alert.showAndWait();
            System.out.println(((Control)evt.getSource()).getId());
         }
@@ -152,6 +157,7 @@ public class mapafttgoogleController implements Initializable {
     String aula;
     String professor;
     String horario;
+    String sala;
     
 //    @FXML
 //    void onPaneSalaClick() {

@@ -20,6 +20,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -29,6 +30,61 @@ import javafx.stage.Stage;
  * @author Caue
  */
 public class tela_pesquisaController implements Initializable {
+    
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        
+        cbTipo.getItems().add("Matéria");
+        cbTipo.getItems().add("Professor");
+        
+        String[][] matrixSEG = ExcelController.getDayMatrix(Excel.Day.MONDAY);
+        String[][] matrixTER = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
+        String[][] matrixQUA = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
+        String[][] matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
+        String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
+        
+        lblSEG1.setText(matrixSEG[0][Excel.disciplina]);
+        lblSEG2.setText(matrixSEG[1][Excel.disciplina]);
+        lblSEG3.setText(matrixSEG[2][Excel.disciplina]);
+        lblSEG4.setText(matrixSEG[3][Excel.disciplina]);
+        lblTER1.setText(matrixTER[0][Excel.disciplina]);
+        lblTER2.setText(matrixTER[1][Excel.disciplina]);
+        lblTER3.setText(matrixTER[2][Excel.disciplina]);
+        lblTER4.setText(matrixTER[3][Excel.disciplina]);
+        lblQUA1.setText(matrixQUA[0][Excel.disciplina]);
+        lblQUA2.setText(matrixQUA[1][Excel.disciplina]);
+        lblQUA3.setText(matrixQUA[2][Excel.disciplina]);
+        lblQUA4.setText(matrixQUA[3][Excel.disciplina]);
+        lblQUI1.setText(matrixQUI[0][Excel.disciplina]);
+        lblQUI2.setText(matrixQUI[1][Excel.disciplina]);
+        lblQUI3.setText(matrixQUI[2][Excel.disciplina]);
+        lblQUI4.setText(matrixQUI[3][Excel.disciplina]);
+        lblSEX1.setText(matrixSEX[0][Excel.disciplina]);
+        lblSEX2.setText(matrixSEX[1][Excel.disciplina]);
+        lblSEX3.setText(matrixSEX[2][Excel.disciplina]);
+        lblSEX4.setText(matrixSEX[3][Excel.disciplina]);
+        
+        String[][] matrixSAB = ExcelController.getDayMatrix(Excel.Day.SATURDAY);
+        if (matrixSAB != null) {
+            lblSAB1.setText(matrixSAB[0][Excel.disciplina]);
+            lblSAB2.setText(matrixSAB[1][Excel.disciplina]);
+            lblSAB3.setText(matrixSAB[2][Excel.disciplina]);
+            lblSAB4.setText(matrixSAB[3][Excel.disciplina]);
+        }
+    }
+    
+    private TextField txtNome;
+    
+    @FXML
+    private void onTextChanged() {
+        if (cbTipo.getValue() != null) {
+            
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Escolha um tipo!", ButtonType.OK);
+            alert.showAndWait();
+            txtNome.clear();
+        }
+    }
     
     @FXML
     private ComboBox<String> cbTipo;
@@ -129,69 +185,5 @@ public class tela_pesquisaController implements Initializable {
     private Label lblSAB3;
     @FXML
     private Label lblSAB4;
-    
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        
-        cbTipo.getItems().add("Matéria");
-        cbTipo.getItems().add("Professor");
-        
-        String[][] matrixSEG = ExcelController.getDayMatrix(Excel.Day.MONDAY);
-        String[][] matrixTER = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
-        String[][] matrixQUA = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
-        String[][] matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
-        String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
-        
-        lblSEG1.setText(matrixSEG[0][1]);
-        
-        lblSEG2.setText(matrixSEG[1][1]);
-        
-        lblSEG3.setText(matrixSEG[2][1]);
-        
-        lblSEG4.setText(matrixSEG[3][1]);
-        
-        lblTER1.setText(matrixTER[0][1]);
-        
-        lblTER2.setText(matrixTER[1][1]);
-        
-        lblTER3.setText(matrixTER[2][1]);
-        
-        lblTER4.setText(matrixTER[3][1]);
-        
-        lblQUA1.setText(matrixQUA[0][1]);
-        
-        lblQUA2.setText(matrixQUA[1][1]);
-        
-        lblQUA3.setText(matrixQUA[2][1]);
-        
-        lblQUA4.setText(matrixQUA[3][1]);
-        
-        lblQUI1.setText(matrixQUI[0][1]);
-        
-        lblQUI2.setText(matrixQUI[1][1]);
-        
-        lblQUI3.setText(matrixQUI[2][1]);
-        
-        lblQUI4.setText(matrixQUI[3][1]);
-        
-        lblSEX1.setText(matrixSEX[0][1]);
-        
-        lblSEX2.setText(matrixSEX[1][1]);
-        
-        lblSEX3.setText(matrixSEX[2][1]);
-        
-        lblSEX4.setText(matrixSEX[3][1]);
-        
-        String[][] matrixSAB = ExcelController.getDayMatrix(Excel.Day.SATURDAY);
-        if (matrixSAB != null) {
-            lblSAB1.setText(matrixSAB[0][1]);
-
-            lblSAB2.setText(matrixSAB[1][1]);
-
-            lblSAB3.setText(matrixSAB[2][1]);
-
-            lblSAB4.setText(matrixSAB[3][1]);
-        }
-    }
     
 }
