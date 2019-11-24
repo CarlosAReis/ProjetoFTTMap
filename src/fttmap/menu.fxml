@@ -69,7 +69,7 @@
                         <Insets left="15.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <ComboBox id="cbSemestre" fx:id="cbSemestre" prefWidth="150.0" style="-fx-background-color: white;">
+                  <ComboBox id="cbSemestre" fx:id="cbSemestre" prefWidth="150.0" style="-fx-background-color: white;" onAction="#onActionComboboxSemestre">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>

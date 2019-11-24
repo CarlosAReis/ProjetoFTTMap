@@ -20,7 +20,7 @@
                   <Font name="Arial" size="21.0" />
                </font>
             </Label>
-            <TextField id="tbNome" fx:id="tbNome" editable="false" layoutX="70.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="NOME" />
+            <TextField id="tbNome" fx:id="tbNome" layoutX="70.0" layoutY="87.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="212.0" promptText="NOME" />
             <Label alignment="CENTER" layoutX="385.0" layoutY="70.0" prefHeight="20.0" prefWidth="87.0" text="TIPO">
                <font>
                   <Font name="Arial Bold" size="16.0" />

@@ -94,12 +94,15 @@ public class tela_pesquisaController implements Initializable {
         String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
         
         Label lbSEG1 = new Label(matrixSEG[0][1]);
+        System.out.println(lbSEG1.toString());
         pnSEG1 = new Pane(lbSEG1);
         
         Label lbSEG2 = new Label(matrixSEG[1][1]);
+        System.out.println(lbSEG2.toString());
         pnSEG2 = new Pane(lbSEG2);
         
         Label lbSEG3 = new Label(matrixSEG[2][1]);
+        System.out.println(lbSEG3.toString());
         pnSEG3 = new Pane(lbSEG3);
         
         Label lbSEG4 = new Label(matrixSEG[3][1]);

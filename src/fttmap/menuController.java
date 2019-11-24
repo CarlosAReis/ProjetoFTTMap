@@ -59,12 +59,16 @@ public class menuController implements Initializable {
     
     @FXML
     void onActionMapa() throws IOException {
-         
-        Parent root = FXMLLoader.load(getClass().getResource("mapafttgoogle.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if (cbSemestre.getValue() != null) {
+            Parent root = FXMLLoader.load(getClass().getResource("mapafttgoogle.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Alert alert = new Alert(AlertType.WARNING, "Escolha um semestre!", ButtonType.OK);
+            alert.showAndWait();
+        }
     }
     
     @FXML
@@ -87,11 +91,16 @@ public class menuController implements Initializable {
 
     @FXML
     void onActionPesquisar() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("tela_pesquisa.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        if (cbSemestre.getValue() != null) {
+            Parent root = FXMLLoader.load(getClass().getResource("tela_pesquisa.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } else {
+            Alert alert = new Alert(AlertType.WARNING, "Escolha um semestre!", ButtonType.OK);
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -110,6 +119,7 @@ public class menuController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         
         boolean userIsAdmin = false;
+        pnCurso.setVisible(false);
         
         if (userIsAdmin) {
             pnCurso.setVisible(true);
@@ -132,10 +142,11 @@ public class menuController implements Initializable {
         
     }
     
-    private void comboAction(ActionEvent event) {
+    @FXML
+    void onActionComboboxSemestre() {
         
         String curso;
-                
+        
         boolean userIsAdmin = false;
         
         if (userIsAdmin) {

@@ -124,43 +124,43 @@ public class Excel {
     public static String[][] get(Day day) {
         switch (day) {
             case MONDAY:
-                return fillMatrix(1, 5);
+                return fillMatrix(0, 4);
             case TUESDAY:
-                return fillMatrix(5, 9);
+                return fillMatrix(4, 8);
             case WEDNESDAY:
-                return fillMatrix(9, 13);
+                return fillMatrix(8, 12);
             case THURSDAY:
-                return fillMatrix(13, 17);
+                return fillMatrix(12, 16);
             case FRIDAY:
-                return fillMatrix(17, 21);
+                return fillMatrix(16, 20);
             case SATURDAY:
                 if (!hasSaturday) {
                     return null;
                 }
-                return fillMatrix(21, 25);
+                return fillMatrix(20, 24);
         }
         return null;
     }
     
     private static String[][] fillMatrix (Integer begin, Integer end) {
         String m[][] = new String[4][6];
-        for (Integer i = begin; i < end; i++) {
-            m[i][diaSemana] = diaSemanaList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][diaSemana] = diaSemanaList.get(i);
         }
-        for (Integer i = begin; i < end; i++) {
-            m[i][disciplina] = disciplinaList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][disciplina] = disciplinaList.get(i);
         }
-        for (Integer i = begin; i < end; i++) {
-            m[i][horaInicio] = horaInicioList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][horaInicio] = horaInicioList.get(i);
         }
-        for (Integer i = begin; i < end; i++) {
-            m[i][horaTermino] = horaTerminoList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][horaTermino] = horaTerminoList.get(i);
         }
-        for (Integer i = begin; i < end; i++) {
-            m[i][professor] = professorList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][professor] = professorList.get(i);
         }
-        for (Integer i = begin; i < end; i++) {
-            m[i][sala] = salaList.get(i);
+        for (Integer i = begin, j = 0; i < end; i++, j++) {
+            m[j][sala] = salaList.get(i);
         }
         return m;
     }
