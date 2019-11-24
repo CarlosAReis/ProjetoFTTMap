@@ -53,7 +53,6 @@ public class Excel {
         horaTerminoList = new ArrayList<>();
         professorList = new ArrayList<>();
         salaList = new ArrayList<>();
-        hasSaturday = true;
         try {
             path = new File(".").getCanonicalPath();
             EXCEL_FILE_LOCATION = String.valueOf(path) + "\\csv\\newCsv.xls";
@@ -67,15 +66,24 @@ public class Excel {
         Workbook workbook = null;
         try {
             
+            hasSaturday = true;
+            
+            diaSemanaList.clear();
+            disciplinaList.clear();
+            horaInicioList.clear();
+            horaTerminoList.clear();
+            professorList.clear();
+            salaList.clear();
+            
             workbook = Workbook.getWorkbook(new File(path + "\\csv\\" + semester + ".xls"));
             Sheet sheet = workbook.getSheet(0);
             // column, line
-            Integer rowLimit = 23;
+            Integer rowLimit = 25;
             try {
                 sheet.getCell(diaSemana, rowLimit - 1);
             } catch (Exception e) {
                 hasSaturday = false;
-                rowLimit = 21;
+                rowLimit = 22;
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 diaSemanaList.add(sheet.getCell(diaSemana, i).getContents());
