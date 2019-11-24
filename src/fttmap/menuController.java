@@ -137,8 +137,6 @@ public class menuController implements Initializable {
         cbSemestre.getItems().add("6");
         cbSemestre.getItems().add("7");
         cbSemestre.getItems().add("8");
-        cbSemestre.getItems().add("9");
-        cbSemestre.getItems().add("10");
         
     }
     
