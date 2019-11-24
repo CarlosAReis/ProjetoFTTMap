@@ -69,7 +69,24 @@
                         <Insets left="15.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <ComboBox id="cbSemestre" fx:id="cbSemestre" prefWidth="150.0" style="-fx-background-color: white;">
+                  <ComboBox id="cbSemestre" fx:id="cbSemestre" prefWidth="150.0" style="-fx-background-color: white;" onAction="#onActionComboboxSemestre">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </ComboBox>
+               </children>
+            </VBox>
+            <VBox id="pnCurso" fx:id="pnCurso" layoutX="23.0" layoutY="209.0" prefHeight="86.0" prefWidth="153.0" style="-fx-background-color: #FDFF88; -fx-border-color: #5162FF; -fx-border-width: 3; -fx-background-radius: 5; -fx-border-radius: 5;">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="78.0" text="CURSO" textAlignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="35.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox id="cbCurso" fx:id="cbCurso" prefWidth="150.0" style="-fx-background-color: white;">
                      <VBox.margin>
                         <Insets top="5.0" />
                      </VBox.margin>

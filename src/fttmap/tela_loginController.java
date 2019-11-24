@@ -73,9 +73,13 @@ public class tela_loginController {
     
     private void doLogin(boolean asAdmin) throws IOException{
         
+<<<<<<< HEAD
         showMenu();
         /*
         logado =  LoginController.doLogin(asAdmin, getUser());
+=======
+        logado = true;//LoginController.DoLogin(asAdmin, GetUser());
+>>>>>>> 82af0a181ac6ffa4b5246b7ced9636bb88232507
         
         if(logado){
            showMenu();
