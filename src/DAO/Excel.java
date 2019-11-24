@@ -85,30 +85,30 @@ public class Excel {
                 hasSaturday = false;
                 rowLimit = 21;
             }
-                System.out.println("rowLimit => " + rowLimit);
+//                System.out.println("rowLimit => " + rowLimit);
             for (Integer i = 1; i < rowLimit; i++) {
                 diaSemanaList.add(sheet.getCell(diaSemana, i).getContents());
-                System.out.println(sheet.getCell(diaSemana, i).getContents());
+//                System.out.println(sheet.getCell(diaSemana, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 disciplinaList.add(sheet.getCell(disciplina, i).getContents());
-                System.out.println(sheet.getCell(disciplina, i).getContents());
+//                System.out.println(sheet.getCell(disciplina, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 horaInicioList.add(sheet.getCell(horaInicio, i).getContents());
-                System.out.println(sheet.getCell(horaInicio, i).getContents());
+//                System.out.println(sheet.getCell(horaInicio, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 horaTerminoList.add(sheet.getCell(horaTermino, i).getContents());
-                System.out.println(sheet.getCell(horaTermino, i).getContents());
+//                System.out.println(sheet.getCell(horaTermino, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 professorList.add(sheet.getCell(professor, i).getContents());
-                System.out.println(sheet.getCell(professor, i).getContents());
+//                System.out.println(sheet.getCell(professor, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 salaList.add(sheet.getCell(sala, i).getContents());
-                System.out.println(sheet.getCell(sala, i).getContents());
+//                System.out.println(sheet.getCell(sala, i).getContents());
             }
         } catch (IOException e) {
             e.printStackTrace();

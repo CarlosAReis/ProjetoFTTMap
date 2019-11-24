@@ -30,6 +30,21 @@ import javafx.stage.Stage;
  * @author Caue
  */
 public class tela_pesquisaController implements Initializable {
+        
+    static String[][] matrixSEG = ExcelController.getDayMatrix(Excel.Day.MONDAY);
+    static String[][] matrixTER = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
+    static String[][] matrixQUA = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
+    static String[][] matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
+    static String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
+    
+    static {
+        matrixSEG = ExcelController.getDayMatrix(Excel.Day.MONDAY);
+        matrixTER = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
+        matrixQUA = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
+        matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
+        matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
+    }
+
     
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -37,12 +52,37 @@ public class tela_pesquisaController implements Initializable {
         cbTipo.getItems().add("Matéria");
         cbTipo.getItems().add("Professor");
         
-        String[][] matrixSEG = ExcelController.getDayMatrix(Excel.Day.MONDAY);
-        String[][] matrixTER = ExcelController.getDayMatrix(Excel.Day.TUESDAY);
-        String[][] matrixQUA = ExcelController.getDayMatrix(Excel.Day.WEDNESDAY);
-        String[][] matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
-        String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
+        showAll();
         
+    }
+    
+    @FXML
+    private TextField txtNome;
+    
+    @FXML
+    private void onTextChanged() {
+        if (cbTipo.getValue() != null) {
+//            System.out.println(txtNome.getText());
+            if (txtNome == null || txtNome.getText() == null || txtNome.getText().isEmpty()) {
+//                System.out.println("EMPTYYYYYYYYYYYYY");
+                showAll();
+            } else if (cbTipo.getValue() == "Matéria") {
+//                System.out.println("Matéria");
+                show(txtNome.getText().toUpperCase(), Excel.disciplina);
+            } else if (cbTipo.getValue() == "Professor") {
+//                System.out.println("Professor");
+                show(txtNome.getText().toUpperCase(), Excel.professor);
+            } else {
+//                System.out.println("WTF");
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Escolha um tipo!", ButtonType.OK);
+            alert.showAndWait();
+            txtNome.setText("");
+        }
+    }
+    
+    private void showAll() {
         lblSEG1.setText(matrixSEG[0][Excel.disciplina]);
         lblSEG2.setText(matrixSEG[1][Excel.disciplina]);
         lblSEG3.setText(matrixSEG[2][Excel.disciplina]);
@@ -73,16 +113,34 @@ public class tela_pesquisaController implements Initializable {
         }
     }
     
-    private TextField txtNome;
-    
-    @FXML
-    private void onTextChanged() {
-        if (cbTipo.getValue() != null) {
-            
-        } else {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Escolha um tipo!", ButtonType.OK);
-            alert.showAndWait();
-            txtNome.clear();
+    private void show(String filter, Integer column) {
+        lblSEG1.setText(matrixSEG[0][column].toUpperCase().contains(filter) ? matrixSEG[0][Excel.disciplina] : "");
+        lblSEG2.setText(matrixSEG[1][column].toUpperCase().contains(filter) ? matrixSEG[1][Excel.disciplina] : "");
+        lblSEG3.setText(matrixSEG[2][column].toUpperCase().contains(filter) ? matrixSEG[2][Excel.disciplina] : "");
+        lblSEG4.setText(matrixSEG[3][column].toUpperCase().contains(filter) ? matrixSEG[3][Excel.disciplina] : "");
+        lblTER1.setText(matrixTER[0][column].toUpperCase().contains(filter) ? matrixTER[0][Excel.disciplina] : "");
+        lblTER2.setText(matrixTER[1][column].toUpperCase().contains(filter) ? matrixTER[1][Excel.disciplina] : "");
+        lblTER3.setText(matrixTER[2][column].toUpperCase().contains(filter) ? matrixTER[2][Excel.disciplina] : "");
+        lblTER4.setText(matrixTER[3][column].toUpperCase().contains(filter) ? matrixTER[3][Excel.disciplina] : "");
+        lblQUA1.setText(matrixQUA[0][column].toUpperCase().contains(filter) ? matrixQUA[0][Excel.disciplina] : "");
+        lblQUA2.setText(matrixQUA[1][column].toUpperCase().contains(filter) ? matrixQUA[1][Excel.disciplina] : "");
+        lblQUA3.setText(matrixQUA[2][column].toUpperCase().contains(filter) ? matrixQUA[2][Excel.disciplina] : "");
+        lblQUA4.setText(matrixQUA[3][column].toUpperCase().contains(filter) ? matrixQUA[3][Excel.disciplina] : "");
+        lblQUI1.setText(matrixQUI[0][column].toUpperCase().contains(filter) ? matrixQUI[0][Excel.disciplina] : "");
+        lblQUI2.setText(matrixQUI[1][column].toUpperCase().contains(filter) ? matrixQUI[1][Excel.disciplina] : "");
+        lblQUI3.setText(matrixQUI[2][column].toUpperCase().contains(filter) ? matrixQUI[2][Excel.disciplina] : "");
+        lblQUI4.setText(matrixQUI[3][column].toUpperCase().contains(filter) ? matrixQUI[3][Excel.disciplina] : "");
+        lblSEX1.setText(matrixSEX[0][column].toUpperCase().contains(filter) ? matrixSEX[0][Excel.disciplina] : "");
+        lblSEX2.setText(matrixSEX[1][column].toUpperCase().contains(filter) ? matrixSEX[1][Excel.disciplina] : "");
+        lblSEX3.setText(matrixSEX[2][column].toUpperCase().contains(filter) ? matrixSEX[2][Excel.disciplina] : "");
+        lblSEX4.setText(matrixSEX[3][column].toUpperCase().contains(filter) ? matrixSEX[3][Excel.disciplina] : "");
+        
+        String[][] matrixSAB = ExcelController.getDayMatrix(Excel.Day.SATURDAY);
+        if (matrixSAB != null) {
+            lblSAB1.setText(matrixSAB[0][column].toUpperCase().contains(filter) ? matrixSAB[0][Excel.disciplina] : "");
+            lblSAB2.setText(matrixSAB[1][column].toUpperCase().contains(filter) ? matrixSAB[1][Excel.disciplina] : "");
+            lblSAB3.setText(matrixSAB[2][column].toUpperCase().contains(filter) ? matrixSAB[2][Excel.disciplina] : "");
+            lblSAB4.setText(matrixSAB[3][column].toUpperCase().contains(filter) ? matrixSAB[3][Excel.disciplina] : "");
         }
     }
     
