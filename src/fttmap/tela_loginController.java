@@ -6,7 +6,6 @@
 package fttmap;
 
 import Controllers.Acesso;
-import Controllers.LoginController;
 import VO.Usuario;
 import java.io.IOException;
 import javafx.application.Platform;
@@ -73,7 +72,6 @@ public class tela_loginController {
     
     private void doLogin(boolean asAdmin) throws IOException{
         
-<<<<<<< HEAD
         showMenu();
         /*
         logado =  LoginController.doLogin(asAdmin, getUser());
