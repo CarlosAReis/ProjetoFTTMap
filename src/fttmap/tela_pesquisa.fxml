@@ -44,18 +44,54 @@
                   <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Pane id="pnSEG1" fx:id="pnSEG1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="1" />
-                  <Pane id="pnTER1" fx:id="pnTER1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Pane id="pnQUA1" fx:id="pnQUA1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Pane id="pnQUI1" fx:id="pnQUI1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Pane id="pnSEX1" fx:id="pnSEX1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                  <Pane id="pnSAB1" fx:id="pnSAB1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-                  <Pane id="pnSEG2" fx:id="pnSEG2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="2" />
-                  <Pane id="pnTER2" fx:id="pnTER2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Pane id="pnQUA2" fx:id="pnQUA2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Pane id="pnQUI2" fx:id="pnQUI2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Pane id="pnSEX2" fx:id="pnSEX2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                  <Pane id="pnSAB2" fx:id="pnSAB2" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Pane id="pnSEG1" fx:id="pnSEG1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblSEG1" fx:id="lblSEG1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="46.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnTER1" fx:id="pnTER1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblTER1" fx:id="lblTER1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUA1" fx:id="pnQUA1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblQUA1" fx:id="lblQUA1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="46.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUI1" fx:id="pnQUI1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblQUI1" fx:id="lblQUI1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="45.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEX1" fx:id="pnSEX1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblSEX1" fx:id="lblSEX1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="46.0" prefWidth="93.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSAB1" fx:id="pnSAB1" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <children>
+                        <Label id="lblSAB1" fx:id="lblSAB1" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="45.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEG2" fx:id="pnSEG2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblSEG2" fx:id="lblSEG2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="90.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnTER2" fx:id="pnTER2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblTER2" fx:id="lblTER2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUA2" fx:id="pnQUA2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblQUA2" fx:id="lblQUA2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="48.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUI2" fx:id="pnQUI2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblQUI2" fx:id="lblQUI2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="48.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEX2" fx:id="pnSEX2" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblSEX2" fx:id="lblSEX2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="48.0" prefWidth="93.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSAB2" fx:id="pnSAB2" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <children>
+                        <Label id="lblSAB2" fx:id="lblSAB2" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="47.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" />
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" />
                   <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" />
@@ -110,18 +146,54 @@
                         <Insets left="21.0" />
                      </GridPane.margin>
                   </Label>
-                  <Pane id="pnSEG3" fx:id="pnSEG3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="3" />
-                  <Pane id="pnSEG4" fx:id="pnSEG4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="4" />
-                  <Pane id="pnTER3" fx:id="pnTER3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Pane id="pnTER4" fx:id="pnTER4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <Pane id="pnQUA3" fx:id="pnQUA3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                  <Pane id="pnQUA4" fx:id="pnQUA4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                  <Pane id="pnQUI3" fx:id="pnQUI3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Pane id="pnQUI4" fx:id="pnQUI4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                  <Pane id="pnSEX3" fx:id="pnSEX3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <Pane id="pnSEX4" fx:id="pnSEX4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                  <Pane id="pnSAB3" fx:id="pnSAB3" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-                  <Pane id="pnSAB4" fx:id="pnSAB4" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                  <Pane id="pnSEG3" fx:id="pnSEG3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblSEG3" fx:id="lblSEG3" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="1.0" prefHeight="47.0" prefWidth="89.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEG4" fx:id="pnSEG4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblSEG4" fx:id="lblSEG4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="44.0" prefWidth="90.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnTER3" fx:id="pnTER3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblTER3" fx:id="lblTER3" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="50.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnTER4" fx:id="pnTER4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblTER4" fx:id="lblTER4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="45.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUA3" fx:id="pnQUA3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblQUA3" fx:id="lblQUA3" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="49.0" prefWidth="90.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUA4" fx:id="pnQUA4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblQUA4" fx:id="lblQUA4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="44.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUI3" fx:id="pnQUI3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblQUI3" fx:id="lblQUI3" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="49.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnQUI4" fx:id="pnQUI4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblQUI4" fx:id="lblQUI4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="44.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEX3" fx:id="pnSEX3" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblSEX3" fx:id="lblSEX3" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="49.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSEX4" fx:id="pnSEX4" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblSEX4" fx:id="lblSEX4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="44.0" prefWidth="92.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSAB3" fx:id="pnSAB3" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <children>
+                        <Label id="lblSAB3" fx:id="lblSAB3" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="49.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
+                  <Pane id="pnSAB4" fx:id="pnSAB4" prefHeight="81.0" prefWidth="93.0" style="-fx-background-color: white; -fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                     <children>
+                        <Label id="lblSAB4" fx:id="lblSAB4" alignment="CENTER" contentDisplay="CENTER" layoutY="-1.0" prefHeight="45.0" prefWidth="91.0" textAlignment="CENTER" wrapText="true" />
+                     </children></Pane>
                </children>
             </GridPane>
          </children>

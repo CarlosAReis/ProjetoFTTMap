@@ -81,6 +81,55 @@ public class tela_pesquisaController implements Initializable {
     @FXML
     private Pane pnSAB4;
     
+    @FXML
+    private Label lblSEG1;
+    @FXML
+    private Label lblSEG2;
+    @FXML
+    private Label lblSEG3;
+    @FXML
+    private Label lblSEG4;
+    @FXML
+    private Label lblTER1;
+    @FXML
+    private Label lblTER2;
+    @FXML
+    private Label lblTER3;
+    @FXML
+    private Label lblTER4;
+    @FXML
+    private Label lblQUA1;
+    @FXML
+    private Label lblQUA2;
+    @FXML
+    private Label lblQUA3;
+    @FXML
+    private Label lblQUA4;
+    @FXML
+    private Label lblQUI1;
+    @FXML
+    private Label lblQUI2;
+    @FXML
+    private Label lblQUI3;
+    @FXML
+    private Label lblQUI4;
+    @FXML
+    private Label lblSEX1;
+    @FXML
+    private Label lblSEX2;
+    @FXML
+    private Label lblSEX3;
+    @FXML
+    private Label lblSEX4;
+    @FXML
+    private Label lblSAB1;
+    @FXML
+    private Label lblSAB2;
+    @FXML
+    private Label lblSAB3;
+    @FXML
+    private Label lblSAB4;
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
@@ -93,82 +142,55 @@ public class tela_pesquisaController implements Initializable {
         String[][] matrixQUI = ExcelController.getDayMatrix(Excel.Day.THURSDAY);
         String[][] matrixSEX = ExcelController.getDayMatrix(Excel.Day.FRIDAY);
         
-        Label lbSEG1 = new Label(matrixSEG[0][1]);
-        System.out.println(lbSEG1.toString());
-        pnSEG1 = new Pane(lbSEG1);
+        lblSEG1.setText(matrixSEG[0][1]);
         
-        Label lbSEG2 = new Label(matrixSEG[1][1]);
-        System.out.println(lbSEG2.toString());
-        pnSEG2 = new Pane(lbSEG2);
+        lblSEG2.setText(matrixSEG[1][1]);
         
-        Label lbSEG3 = new Label(matrixSEG[2][1]);
-        System.out.println(lbSEG3.toString());
-        pnSEG3 = new Pane(lbSEG3);
+        lblSEG3.setText(matrixSEG[2][1]);
         
-        Label lbSEG4 = new Label(matrixSEG[3][1]);
-        pnSEG4 = new Pane(lbSEG4);
+        lblSEG4.setText(matrixSEG[3][1]);
         
-        Label lbTER1 = new Label(matrixTER[0][1]);
-        pnTER1 = new Pane(lbTER1);
+        lblTER1.setText(matrixTER[0][1]);
         
-        Label lbTER2 = new Label(matrixTER[1][1]);
-        pnTER2 = new Pane(lbTER2);
+        lblTER2.setText(matrixTER[1][1]);
         
-        Label lbTER3 = new Label(matrixTER[2][1]);
-        pnTER3 = new Pane(lbTER3);
+        lblTER3.setText(matrixTER[2][1]);
         
-        Label lbTER4 = new Label(matrixTER[3][1]);
-        pnTER4 = new Pane(lbTER4);
+        lblTER4.setText(matrixTER[3][1]);
         
-        Label lbQUA1 = new Label(matrixQUA[0][1]);
-        pnQUA1 = new Pane(lbQUA1);
+        lblQUA1.setText(matrixQUA[0][1]);
         
-        Label lbQUA2 = new Label(matrixQUA[1][1]);
-        pnQUA2 = new Pane(lbQUA2);
+        lblQUA2.setText(matrixQUA[1][1]);
         
-        Label lbQUA3 = new Label(matrixQUA[2][1]);
-        pnQUA3 = new Pane(lbQUA3);
+        lblQUA3.setText(matrixQUA[2][1]);
         
-        Label lbQUA4 = new Label(matrixQUA[3][1]);
-        pnQUA4 = new Pane(lbQUA4);
+        lblQUA4.setText(matrixQUA[3][1]);
         
-        Label lbQUI1 = new Label(matrixQUI[0][1]);
-        pnQUI1 = new Pane(lbQUI1);
+        lblQUI1.setText(matrixQUI[0][1]);
         
-        Label lbQUI2 = new Label(matrixQUI[1][1]);
-        pnQUI2 = new Pane(lbQUI2);
+        lblQUI2.setText(matrixQUI[1][1]);
         
-        Label lbQUI3 = new Label(matrixQUI[2][1]);
-        pnQUI3 = new Pane(lbQUI3);
+        lblQUI3.setText(matrixQUI[2][1]);
         
-        Label lbQUI4 = new Label(matrixQUI[3][1]);
-        pnQUI4 = new Pane(lbQUI4);
+        lblQUI4.setText(matrixQUI[3][1]);
         
-        Label lbSEX1 = new Label(matrixSEX[0][1]);
-        pnSEX1 = new Pane(lbSEX1);
+        lblSEX1.setText(matrixSEX[0][1]);
         
-        Label lbSEX2 = new Label(matrixSEX[1][1]);
-        pnSEX2 = new Pane(lbSEX2);
+        lblSEX2.setText(matrixSEX[1][1]);
         
-        Label lbSEX3 = new Label(matrixSEX[2][1]);
-        pnSEX3 = new Pane(lbSEX3);
+        lblSEX3.setText(matrixSEX[2][1]);
         
-        Label lbSEX4 = new Label(matrixSEX[3][1]);
-        pnSEX4 = new Pane(lbSEX4);
+        lblSEX4.setText(matrixSEX[3][1]);
         
         String[][] matrixSAB = ExcelController.getDayMatrix(Excel.Day.SATURDAY);
         if (matrixSAB != null) {
-            Label lbSAB1 = new Label(matrixSAB[0][1]);
-            pnSAB1 = new Pane(lbSAB1);
+            lblSAB1.setText(matrixSAB[0][1]);
 
-            Label lbSAB2 = new Label(matrixSAB[1][1]);
-            pnSAB2 = new Pane(lbSAB2);
+            lblSAB2.setText(matrixSAB[1][1]);
 
-            Label lbSAB3 = new Label(matrixSAB[2][1]);
-            pnSAB3 = new Pane(lbSAB3);
+            lblSAB3.setText(matrixSAB[2][1]);
 
-            Label lbSAB4 = new Label(matrixSAB[3][1]);
-            pnSAB4 = new Pane(lbSAB4);
+            lblSAB4.setText(matrixSAB[3][1]);
         }
     }
     
