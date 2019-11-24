@@ -83,8 +83,9 @@ public class Excel {
                 sheet.getCell(diaSemana, rowLimit - 1);
             } catch (Exception e) {
                 hasSaturday = false;
-                rowLimit = 22;
+                rowLimit = 21;
             }
+                System.out.println("rowLimit => " + rowLimit);
             for (Integer i = 1; i < rowLimit; i++) {
                 diaSemanaList.add(sheet.getCell(diaSemana, i).getContents());
                 System.out.println(sheet.getCell(diaSemana, i).getContents());
