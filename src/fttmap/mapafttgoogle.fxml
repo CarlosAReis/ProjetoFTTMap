@@ -208,7 +208,7 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Pane id="pnBloco9" fx:id="pnBloco9" layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;">
+                  <Pane id="pnBloco9" fx:id="pnBloco9" layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
                      <children>
                         <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
                            <image>
