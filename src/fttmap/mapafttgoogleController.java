@@ -222,6 +222,8 @@ public class mapafttgoogleController implements Initializable {
         
         if (Integer.valueOf(number) > 73 && Integer.valueOf(number) < 89) {
             return pnFTT;
+        } else if (Integer.valueOf(number) > 62 && Integer.valueOf(number) < 74) {
+            return pnBloco9;
         }
         return null;
     }
@@ -229,6 +231,26 @@ public class mapafttgoogleController implements Initializable {
     private Pane getClassroomPaneInstance(String number) {
         
         switch (number) {
+            case "63":
+                return pn63;
+            case "64":
+                return pn64;
+            case "66":
+                return pn66;
+            case "67":
+                return pn67;
+            case "68":
+                return pn68;
+            case "69":
+                return pn69;
+            case "70":
+                return pn70;
+            case "71":
+                return pn71;
+            case "72":
+                return pn72;
+            case "73":
+                return pn73;
             case "74":
                 return pn74;
             case "75":
@@ -264,6 +286,26 @@ public class mapafttgoogleController implements Initializable {
     private Label getClassroomLabelInstance(String number) {
         
         switch (number) {
+            case "63":
+                return lbl63;
+            case "64":
+                return lbl64;
+            case "66":
+                return lbl66;
+            case "67":
+                return lbl67;
+            case "68":
+                return lbl68;
+            case "69":
+                return lbl69;
+            case "70":
+                return lbl70;
+            case "71":
+                return lbl71;
+            case "72":
+                return lbl72;
+            case "73":
+                return lbl73;
             case "74":
                 return lbl74;
             case "75":
@@ -295,7 +337,26 @@ public class mapafttgoogleController implements Initializable {
         }
         return null;
     }
-    
+    @FXML
+    private Pane pn63;
+    @FXML
+    private Pane pn64;
+    @FXML
+    private Pane pn66;
+    @FXML
+    private Pane pn67;
+    @FXML
+    private Pane pn68;
+    @FXML
+    private Pane pn69;
+    @FXML
+    private Pane pn70;
+    @FXML
+    private Pane pn71;
+    @FXML
+    private Pane pn72;
+    @FXML
+    private Pane pn73;
     @FXML
     private Pane pn74;
     @FXML
@@ -324,6 +385,26 @@ public class mapafttgoogleController implements Initializable {
     private Pane pn87;
     @FXML
     private Pane pn88;
+    @FXML
+    private Label lbl63;
+    @FXML
+    private Label lbl64;
+    @FXML
+    private Label lbl66;
+    @FXML
+    private Label lbl67;
+    @FXML
+    private Label lbl68;
+    @FXML
+    private Label lbl69;
+    @FXML
+    private Label lbl70;
+    @FXML
+    private Label lbl71;
+    @FXML
+    private Label lbl72;
+    @FXML
+    private Label lbl73;
     @FXML
     private Label lbl74;
     @FXML
