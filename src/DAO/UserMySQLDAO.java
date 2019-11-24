@@ -38,9 +38,24 @@ public class UserMySQLDAO <E extends Entity> extends MySQLDAO {
     
     
     @Override
-    public Entity Select(int id) {
+    public Entity select(int id) {
         // Não há retorno por id
         return null;
+    }
+    protected Usuario getUser(ResultSet rs){
+        Usuario user = new Usuario();
+        try{
+            user.setUsername(rs.getString("Username"));
+            user.setSenha(rs.getString("Senha"));
+            user.setSobrenome(rs.getString("Sobrenome"));
+        }
+        catch(SQLException ex){
+            Logger.getLogger(UserMySQLDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return user;
+    }
+    public static void InsertUser(){
+        
     }
 }
 

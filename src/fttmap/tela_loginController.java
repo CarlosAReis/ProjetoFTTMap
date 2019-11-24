@@ -32,7 +32,7 @@ public class tela_loginController {
     @FXML
     private void btnEntrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
         
-        DoLogin(false);
+        doLogin(false);
         // PODE SER ISSO
 //        stage.initModality(Modality.WINDOW_MODAL);
 //        stage.initOwner(stage.getScene().getWindow());
@@ -42,14 +42,14 @@ public class tela_loginController {
     @FXML
     private void btnEntrarADM_Click(javafx.scene.input.MouseEvent event) throws IOException {
         
-        DoLogin(true);
+        doLogin(true);
     }
     
     @FXML
     private void btnSair_Click(javafx.scene.input.MouseEvent event) throws IOException {
         Platform.exit();
     }
-    private Usuario GetUser(){
+    private Usuario getUser(){
         Usuario user = new Usuario();
         //user.setUsername(txt.getText());
         //user.setSenha(txtSenha.getText());
@@ -59,28 +59,31 @@ public class tela_loginController {
         
         return user;
     }
-    private void ShowMenu() throws IOException{ 
+    private void showMenu() throws IOException{ 
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    private void ShowErrorMessage() {
+    private void showErrorMessage() {
         Alert alert = new Alert(Alert.AlertType.ERROR, "Usuário/Senha inválido", ButtonType.OK);
         alert.showAndWait();
     }
     
-    private void DoLogin(boolean asAdmin) throws IOException{
+    private void doLogin(boolean asAdmin) throws IOException{
         
-        logado =  LoginController.DoLogin(asAdmin, GetUser());
+        showMenu();
+        /*
+        logado =  LoginController.doLogin(asAdmin, getUser());
         
         if(logado){
-           ShowMenu();
+           showMenu();
         }
         else{
-            ShowErrorMessage();
+            showErrorMessage();
         }
+                */
     }
     
 }

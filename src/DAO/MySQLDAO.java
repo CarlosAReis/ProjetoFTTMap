@@ -22,7 +22,7 @@ import java.util.ArrayList;
  */
 public class MySQLDAO <E extends Entity> extends DAO {
 
-    final String STRING_CONEXAO = "jdbc:mysql://localhost/lp2";  
+    final String STRING_CONEXAO = "jdbc:mysql://localhost/fttmap";  
     final String USUARIO = "root";  
     final String SENHA = "";
     private String tabela;
@@ -36,7 +36,7 @@ public class MySQLDAO <E extends Entity> extends DAO {
     }
     
     @Override
-    public E Select(int id) {
+    public E select(int id) {
         // Não há retorno por id
         return null;
     }

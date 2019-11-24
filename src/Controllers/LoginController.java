@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class LoginController {
     
-    public static boolean DoLogin(boolean asAdmin, Usuario user) throws IOException{
+    public static boolean doLogin(boolean asAdmin, Usuario user) throws IOException{
         boolean logado;
         Acesso acesso = new Acesso();
         if(asAdmin)

@@ -5,8 +5,14 @@
  */
 package Repository;
 
+import DAO.DAO;
+import DAO.GenerateDAO;
 import Enums.Entities;
+import Enums.Repositories;
 import VO.Entity;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,7 +27,14 @@ public class MySQLRepository extends Repository {
 
     @Override
     public Entity Find(String code, Entities entityType) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+        Entity entidade = null;
+        try {
+            entidade = dao.find(code);
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return entidade;
     }
 
     @Override

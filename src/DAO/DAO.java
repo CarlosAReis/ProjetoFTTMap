@@ -22,7 +22,7 @@ public abstract class DAO <E extends Entity> {
         this.entityClass = entityClass;
     }
     
-    public abstract E Select(int id);
+    public abstract E select(int id);
     public abstract E find(String code) throws SQLException;
     public abstract ArrayList<E> getList() throws SQLException;
     

@@ -47,12 +47,12 @@ public class Excel {
     private static String path;
     
     static {
-        diaSemanaList = new ArrayList<String>();
-        disciplinaList = new ArrayList<String>();
-        horaInicioList = new ArrayList<String>();
-        horaTerminoList = new ArrayList<String>();
-        professorList = new ArrayList<String>();
-        salaList = new ArrayList<String>();
+        diaSemanaList = new ArrayList<>();
+        disciplinaList = new ArrayList<>();
+        horaInicioList = new ArrayList<>();
+        horaTerminoList = new ArrayList<>();
+        professorList = new ArrayList<>();
+        salaList = new ArrayList<>();
         hasSaturday = true;
         try {
             path = new File(".").getCanonicalPath();

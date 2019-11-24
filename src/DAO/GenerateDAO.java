@@ -48,7 +48,7 @@ public class GenerateDAO {
                 retorno = new UserMySQLDAO();
                 break;
             case AULA:
-                retorno = new UserMySQLDAO();
+                retorno = new AulaMySQLDAO();
                 break; 
             default:
                 retorno = null;

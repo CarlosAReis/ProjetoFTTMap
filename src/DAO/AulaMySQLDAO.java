@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import VO.Aula;
 import VO.Entity;
 import VO.Usuario;
 import java.sql.ResultSet;
@@ -19,11 +20,11 @@ import java.util.logging.Logger;
  */
 public class AulaMySQLDAO <E extends Entity> extends MySQLDAO  {
 
-    public AulaMySQLDAO(Class entityClass) {
-        super(entityClass);
+    public AulaMySQLDAO() {
+        super(Aula.class);
         setTabela("Aula");
     }
-    
+
     @Override
     protected E preencheEntidade(ResultSet rs) {
         Usuario user = new Usuario();
