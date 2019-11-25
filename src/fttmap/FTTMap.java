@@ -5,8 +5,8 @@
  */
 package fttmap;
 
-import DAO.Excel;
-import Service.ExcelController;
+import Config.Config;
+import Enums.Repositories;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -24,6 +24,7 @@ public class FTTMap extends Application {
     public void start(final Stage stage) throws IOException {
 //         Excel.write();
 
+        Config.getInstance().setDatabase(Repositories.MYSQL);
         final Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
 
         final Scene scene = new Scene(root);

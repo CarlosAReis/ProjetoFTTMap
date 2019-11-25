@@ -5,6 +5,8 @@
  */
 package fttmap;
 
+import Controllers.ComunsController;
+import VO.Usuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -22,6 +24,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Dialog;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -34,9 +38,17 @@ public class tela_cadastroController implements Initializable {
     
     @FXML
     private ComboBox<String> cbCurso;
+    
+    @FXML
+    private TextField tbRA;
+    
+    @FXML
+    private TextField tbNome;
+    
+    @FXML
+    private PasswordField tbSenha;
     @FXML
     private BorderPane pane;
-    private int cadastrado = 0;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -53,13 +65,30 @@ public class tela_cadastroController implements Initializable {
     @FXML
     void btnRegistrarAction() {
         Dialog dialog = new Dialog();
-        if(cadastrado == 0){
-            dialog.setContentText("Registrado");
-            cadastrado = 1;
+        Usuario user = new Usuario();
+        user.setRA(tbRA.getText());
+        user.setNome(tbNome.getText());
+        user.setSenha(tbSenha.getText());
+        user.setCategoria("Comum");
+        user.setCurso(cbCurso.getValue());
+        user.setSemestre(1);
+        if(!ComunsController.VerifyCourse(cbCurso.getValue())){
+            dialog.setContentText("Selecione um curso");
+        }
+        else if(!ComunsController.VerifyName(user.getNome())){
+            dialog.setContentText("Nome deve estar entre 3 e 20 caracteres");
+        }
+        else if(!ComunsController.VerifyPassword(user.getSenha())){
+             dialog.setContentText("Senha deve estar entre 4 e 8 caracteres");
+        }
+        else if(!ComunsController.VerifyRA(user.getRA())){
+              dialog.setContentText("RA deve estar entre 4 e 20 caracteres");
+        }
+        else if(ComunsController.cadastrarAluno(user)){
+                dialog.setContentText("Aluno Cadastrado");
         }
         else{
             dialog.setContentText("ERRO, ALUNO JÁ CADASTRADO");
-            cadastrado =0;
         }
         dialog.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
         Node closeButton = dialog.getDialogPane().lookupButton(ButtonType.CLOSE);

@@ -6,6 +6,7 @@
 package fttmap;
 
 import Service.ExcelController;
+import VO.Usuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -118,8 +119,9 @@ public class menuController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        boolean userIsAdmin = false;
+        boolean userIsAdmin = Usuario.getCurrentUser().getCategoria().equals("Administrador");
         pnCurso.setVisible(false);
+        btnCadastrarAluno.setVisible(userIsAdmin);
         
         if (userIsAdmin) {
             pnCurso.setVisible(true);
@@ -128,7 +130,7 @@ public class menuController implements Initializable {
             cbCurso.getItems().add("EA");
             cbCurso.getItems().add("ADM");
         }
-        
+            
         cbSemestre.getItems().add("1");
         cbSemestre.getItems().add("2");
         cbSemestre.getItems().add("3");
