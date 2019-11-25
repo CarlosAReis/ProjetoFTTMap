@@ -45,5 +45,10 @@ public class ExcelRepository extends Repository {
     public boolean insert(Object obj, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public void verifyDatabase(Entities entityType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -28,6 +28,10 @@ public class ComunsController {
         
         return logado;
     }
+    public static void verifyDatabase(){
+        Repository repositorio = GenerateRepository.generateRepository(); 
+        repositorio.verifyDatabase(Entities.USUARIO);
+    }
     public static boolean cadastrarAluno(Usuario u){
         Repository repositorio = GenerateRepository.generateRepository();        
         Usuario usuario = (Usuario)repositorio.find(u.getRA(), Entities.USUARIO);

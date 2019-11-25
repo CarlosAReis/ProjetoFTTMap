@@ -11,7 +11,6 @@ import Enums.Entities;
 import Enums.Repositories;
 import VO.Entity;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -76,6 +75,16 @@ public class MySQLRepository extends Repository {
         } catch (SQLException ex) {
             Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
             return false;
+        }
+    }
+
+    @Override
+    public void verifyDatabase(Entities entityType) {
+         DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+         try {
+            dao.verifyDatabase();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     

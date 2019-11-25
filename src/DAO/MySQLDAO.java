@@ -13,6 +13,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 /**
@@ -22,8 +23,9 @@ import java.util.ArrayList;
  */
 public class MySQLDAO <E extends Entity> extends DAO {
 
+    final String STRING_CONEXAO_CRIA_BANCO ="jdbc:mysql://localhost/sys";
     final String STRING_CONEXAO = "jdbc:mysql://localhost/fttmap";  
-    final String USUARIO = "root";  
+    final String USUARIO = "fttmap";  
     final String SENHA = "";
     private String tabela;
     private String updateField;
@@ -173,6 +175,33 @@ public class MySQLDAO <E extends Entity> extends DAO {
     @Override
     public boolean insert(Object object) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void verifyDatabase() throws SQLException {
+        try (Connection connection = DriverManager.getConnection(STRING_CONEXAO_CRIA_BANCO, USUARIO, SENHA )) {
+            String SQL =" create database if not exists fttmap;";
+            Statement stmt = connection.createStatement();  
+            stmt.executeUpdate(SQL);
+            }
+        try(Connection connection = DriverManager.getConnection(STRING_CONEXAO,USUARIO,SENHA)){
+            String SQL = "CREATE TABLE `Usuario` (\n" +
+                        "  `Id` int  PRIMARY KEY auto_increment,\n" +
+                        "  `RA` varchar(20) unique,\n" +
+                        "  `Nome` varchar(20),  \n" +
+                        "  `Senha` varchar(50),\n" +
+                        "  `Categoria` varchar(20),\n" +
+                        "  `Curso` varchar(20),\n" +
+                        "  `Semestre` int\n" +
+                        ");";
+            Statement stmt = connection.createStatement();  
+            stmt.executeUpdate(SQL);
+        }
+         try(Connection connection = DriverManager.getConnection(STRING_CONEXAO,USUARIO,SENHA)){
+            String SQL = "insert into `Usuario`(`RA`,`Nome`,`Senha`,`Categoria`,`Curso`,`Semestre`) values ('admin','Administrador','104-107-116-112-117','Administrador','ALL','0') ;";
+            Statement stmt = connection.createStatement();  
+            stmt.executeUpdate(SQL);
+        }
     }
 
 

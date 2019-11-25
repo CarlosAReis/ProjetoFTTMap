@@ -6,6 +6,7 @@
 package DAO;
 
 import VO.Entity;
+import java.sql.SQLClientInfoException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -29,6 +30,7 @@ public abstract class DAO <E extends Entity> {
     public abstract void update(String value, String Key) throws SQLException;
     public abstract ArrayList<E> getList() throws SQLException;
     public abstract ArrayList<Object> updateList();
+    public abstract void verifyDatabase() throws SQLException;
     
     protected E getInstanceOfE()
     {

@@ -7,7 +7,6 @@ package Repository;
 
 import Enums.Entities;
 import VO.Entity;
-import java.util.ArrayList;
 
 /**
  *
@@ -21,4 +20,5 @@ public abstract class Repository {
   public abstract boolean delete(String code, Entities entityType);
   public abstract boolean insert(String code, Entities entityType);
   public abstract boolean insert(Object obj, Entities entityType);
+  public abstract void verifyDatabase( Entities entityType);
 }
