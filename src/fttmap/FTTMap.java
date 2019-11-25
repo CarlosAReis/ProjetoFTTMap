@@ -7,11 +7,15 @@ package fttmap;
 
 import Config.Config;
 import Enums.Repositories;
+import DAO.Excel;
+import Service.ExcelController;
+import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -28,6 +32,8 @@ public class FTTMap extends Application {
         final Parent root = FXMLLoader.load(getClass().getResource("tela_login.fxml"));
 
         final Scene scene = new Scene(root);
+        
+        stage.getIcons().add(new Image("file:" + new File(".").getCanonicalPath() + "\\src\\images\\tm_logo.png"));
 
         stage.setScene(scene);
         stage.show();

@@ -212,9 +212,59 @@
                      <children>
                         <ImageView fitHeight="345.0" fitWidth="344.0" layoutX="-3.0" layoutY="-2.0">
                            <image>
-                              <Image url="@../images/O%20que%20é%20DLC.png" />
+                              <Image url="@../images/bloco_9.png" />
                            </image>
                         </ImageView>
+                        <Pane id="pn73" fx:id="pn73" layoutX="72.0" layoutY="125.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl73" fx:id="lbl73" layoutX="10.0" layoutY="5.0" text="73" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn72" fx:id="pn72" layoutX="72.0" layoutY="157.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl72" fx:id="lbl72" layoutX="10.0" layoutY="5.0" text="72" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn71" fx:id="pn71" layoutX="110.0" layoutY="125.0" prefHeight="61.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl71" fx:id="lbl71" layoutX="10.0" layoutY="22.0" text="71" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn68" fx:id="pn68" layoutX="185.0" layoutY="125.0" prefHeight="61.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl68" fx:id="lbl68" layoutX="10.0" layoutY="22.0" text="68" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn69" fx:id="pn69" layoutX="148.0" layoutY="125.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl69" fx:id="lbl69" layoutX="10.0" layoutY="5.0" text="69" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn70" fx:id="pn70" layoutX="148.0" layoutY="157.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl70" fx:id="lbl70" layoutX="10.0" layoutY="5.0" text="70" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn67" fx:id="pn67" layoutX="223.0" layoutY="125.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl67" fx:id="lbl67" layoutX="10.0" layoutY="5.0" text="67" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn66" fx:id="pn66" layoutX="223.0" layoutY="157.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl66" fx:id="lbl66" layoutX="10.0" layoutY="5.0" text="66" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn63" fx:id="pn63" layoutX="261.0" layoutY="125.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl63" fx:id="lbl63" layoutX="10.0" layoutY="5.0" text="63" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn64" fx:id="pn64" layoutX="261.0" layoutY="157.0" prefHeight="28.0" prefWidth="33.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl64" fx:id="lbl64" layoutX="10.0" layoutY="5.0" text="64" />
+                           </children>
+                        </Pane>
                      </children>
                   </Pane>
                   <Pane id="pnFTT" fx:id="pnFTT" layoutX="33.0" layoutY="38.0" prefHeight="342.0" prefWidth="341.0" style="-fx-background-color: white;" visible="false">
@@ -224,64 +274,74 @@
                               <Image url="@../images/bloco_ftt.png" />
                            </image>
                         </ImageView>
-                        <Pane id="pn83" fx:id="pn83" layoutX="203.0" layoutY="65.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn83" fx:id="pn83" layoutX="160.0" layoutY="70.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="8.0" layoutY="6.0" text="83" />
+                              <Label id="lbl83" fx:id="lbl83" layoutX="8.0" layoutY="6.0" text="83" />
                            </children>
                         </Pane>
-                        <Pane id="pn79" fx:id="pn79" layoutX="203.0" layoutY="190.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn79" fx:id="pn79" layoutX="160.0" layoutY="195.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="79" />
+                              <Label id="lbl79" fx:id="lbl79" layoutX="7.0" layoutY="5.0" text="79" />
                            </children>
                         </Pane>
-                        <Pane id="pn75" fx:id="pn75" layoutX="203.0" layoutY="265.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn75" fx:id="pn75" layoutX="160.0" layoutY="270.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="75" />
+                              <Label id="lbl75" fx:id="lbl75" layoutX="7.0" layoutY="5.0" text="75" />
                            </children>
                         </Pane>
-                        <Pane id="pn76" fx:id="pn76" layoutX="114.0" layoutY="223.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn76" fx:id="pn76" layoutX="71.0" layoutY="228.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="76" />
+                              <Label id="lbl76" fx:id="lbl76" layoutX="7.0" layoutY="5.0" text="76" />
                            </children>
                         </Pane>
-                        <Pane id="pn80" fx:id="pn80" layoutX="114.0" layoutY="87.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn80" fx:id="pn80" layoutX="71.0" layoutY="92.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="6.0" text="80" />
+                              <Label id="lbl80" fx:id="lbl80" layoutX="7.0" layoutY="6.0" text="80" />
                            </children>
                         </Pane>
-                        <Pane id="pn81" fx:id="pn81" layoutX="203.0" layoutY="98.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn81" fx:id="pn81" layoutX="160.0" layoutY="103.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="81" />
+                              <Label id="lbl81" fx:id="lbl81" layoutX="7.0" layoutY="5.0" text="81" />
                            </children>
                         </Pane>
-                        <Pane id="pn84" fx:id="pn84" layoutX="114.0" layoutY="5.0" prefHeight="28.0" prefWidth="29.0" style="-fx-background-color: white;">
+                        <Pane id="pn84" fx:id="pn84" layoutX="71.0" layoutY="10.0" prefHeight="28.0" prefWidth="29.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="8.0" layoutY="6.0" text="84" />
+                              <Label id="lbl84" fx:id="lbl84" layoutX="8.0" layoutY="6.0" text="84" />
                            </children>
                         </Pane>
-                        <Pane id="pn82" fx:id="pn82" layoutX="114.0" layoutY="46.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn82" fx:id="pn82" layoutX="71.0" layoutY="51.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="82" />
+                              <Label id="lbl82" fx:id="lbl82" layoutX="7.0" layoutY="5.0" text="82" />
                            </children>
                         </Pane>
-                        <Pane id="pn78" fx:id="pn78" layoutX="114.0" layoutY="182.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn78" fx:id="pn78" layoutX="71.0" layoutY="187.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="78" />
+                              <Label id="lbl78" fx:id="lbl78" layoutX="7.0" layoutY="5.0" text="78" />
                            </children>
                         </Pane>
-                        <Pane id="pn77" fx:id="pn77" layoutX="203.0" layoutY="227.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
+                        <Pane id="pn77" fx:id="pn77" layoutX="160.0" layoutY="232.0" prefHeight="27.0" prefWidth="28.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="7.0" layoutY="5.0" text="77" />
+                              <Label id="lbl77" fx:id="lbl77" layoutX="7.0" layoutY="5.0" text="77" />
                            </children>
                         </Pane>
-                        <Pane id="pn85" fx:id="pn85" layoutX="203.0" layoutY="6.0" prefHeight="54.0" prefWidth="39.0" style="-fx-background-color: white;">
+                        <Pane id="pn85" fx:id="pn85" layoutX="160.0" layoutY="11.0" prefHeight="54.0" prefWidth="39.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="13.0" layoutY="19.0" text="85" />
+                              <Label id="lbl85" fx:id="lbl85" layoutX="13.0" layoutY="19.0" text="85" />
                            </children>
                         </Pane>
-                        <Pane id="pn74" fx:id="pn74" layoutX="104.0" layoutY="306.0" prefHeight="28.0" prefWidth="43.0" style="-fx-background-color: white;">
+                        <Pane id="pn74" fx:id="pn74" layoutX="61.0" layoutY="311.0" prefHeight="28.0" prefWidth="43.0" style="-fx-background-color: white;">
                            <children>
-                              <Label layoutX="16.0" layoutY="5.0" text="74" />
+                              <Label id="lbl74" fx:id="lbl74" layoutX="16.0" layoutY="5.0" text="74" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn87" fx:id="pn87" layoutX="220.0" layoutY="249.0" prefHeight="54.0" prefWidth="39.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl87" fx:id="lbl87" layoutX="13.0" layoutY="19.0" text="87" />
+                           </children>
+                        </Pane>
+                        <Pane id="pn88" fx:id="pn88" layoutX="220.0" layoutY="190.0" prefHeight="55.0" prefWidth="39.0" style="-fx-background-color: white;">
+                           <children>
+                              <Label id="lbl88" fx:id="lbl88" layoutX="13.0" layoutY="19.0" text="88" />
                            </children>
                         </Pane>
                      </children>

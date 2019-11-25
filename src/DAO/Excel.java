@@ -53,7 +53,6 @@ public class Excel {
         horaTerminoList = new ArrayList<>();
         professorList = new ArrayList<>();
         salaList = new ArrayList<>();
-        hasSaturday = true;
         try {
             path = new File(".").getCanonicalPath();
             EXCEL_FILE_LOCATION = String.valueOf(path) + "\\csv\\newCsv.xls";
@@ -67,39 +66,49 @@ public class Excel {
         Workbook workbook = null;
         try {
             
+            hasSaturday = true;
+            
+            diaSemanaList.clear();
+            disciplinaList.clear();
+            horaInicioList.clear();
+            horaTerminoList.clear();
+            professorList.clear();
+            salaList.clear();
+            
             workbook = Workbook.getWorkbook(new File(path + "\\csv\\" + semester + ".xls"));
             Sheet sheet = workbook.getSheet(0);
             // column, line
-            Integer rowLimit = 23;
+            Integer rowLimit = 25;
             try {
                 sheet.getCell(diaSemana, rowLimit - 1);
             } catch (Exception e) {
                 hasSaturday = false;
                 rowLimit = 21;
             }
+//                System.out.println("rowLimit => " + rowLimit);
             for (Integer i = 1; i < rowLimit; i++) {
                 diaSemanaList.add(sheet.getCell(diaSemana, i).getContents());
-                System.out.println(sheet.getCell(diaSemana, i).getContents());
+//                System.out.println(sheet.getCell(diaSemana, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 disciplinaList.add(sheet.getCell(disciplina, i).getContents());
-                System.out.println(sheet.getCell(disciplina, i).getContents());
+//                System.out.println(sheet.getCell(disciplina, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 horaInicioList.add(sheet.getCell(horaInicio, i).getContents());
-                System.out.println(sheet.getCell(horaInicio, i).getContents());
+//                System.out.println(sheet.getCell(horaInicio, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 horaTerminoList.add(sheet.getCell(horaTermino, i).getContents());
-                System.out.println(sheet.getCell(horaTermino, i).getContents());
+//                System.out.println(sheet.getCell(horaTermino, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 professorList.add(sheet.getCell(professor, i).getContents());
-                System.out.println(sheet.getCell(professor, i).getContents());
+//                System.out.println(sheet.getCell(professor, i).getContents());
             }
             for (Integer i = 1; i < rowLimit; i++) {
                 salaList.add(sheet.getCell(sala, i).getContents());
-                System.out.println(sheet.getCell(sala, i).getContents());
+//                System.out.println(sheet.getCell(sala, i).getContents());
             }
         } catch (IOException e) {
             e.printStackTrace();
