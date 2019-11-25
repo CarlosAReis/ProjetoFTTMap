@@ -7,18 +7,15 @@ package fttmap;
 
 import DAO.Excel;
 import Service.ExcelController;
-import com.sun.java.accessibility.util.EventID;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -27,7 +24,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
@@ -134,7 +130,7 @@ public class mapafttgoogleController implements Initializable {
                     pn.setBackground(bg);
 //                    pn.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
                     lb.setBackground(bg);
-                       lb.setTextFill(Paint.valueOf("White"));
+                    lb.setTextFill(Paint.valueOf("White"));
                     lb.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
                     Pane blocoPane = getBlocoPaneByClassroomNumber(numeroSala);
                     if (blocoPane != null) {
