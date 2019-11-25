@@ -68,9 +68,9 @@ public class tela_cadastroController implements Initializable {
         dialog.showAndWait();
     }
    
-    @FXML
-    private void closeButtonAction()  {
-        Stage stage  = (Stage) pane.getScene().getWindow();
-        stage.close();
-    }
+//    @FXML
+//    private void closeButtonAction()  {
+//        Stage stage  = (Stage) pane.getScene().getWindow();
+//        stage.close();
+//    }
 }

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <Pane prefHeight="400.0" prefWidth="407.0" style="-fx-background-color: #AFC0FB;" BorderPane.alignment="CENTER">
          <children>
@@ -64,12 +64,7 @@
                   <Font name="Arial" size="21.0" />
                </font>
             </Label>
-            <Button id="btnSalvar" fx:id="btnSalvar" alignment="CENTER" layoutX="73.0" layoutY="333.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="SALVAR" textFill="#656060">
-               <font>
-                  <Font name="Arial" size="21.0" />
-               </font>
-            </Button>
-            <Button id="btnCancelar" fx:id="btnCancelar" alignment="CENTER" layoutX="337.0" layoutY="333.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="CANCELAR" textFill="#656060">
+            <Button id="btnSalvar" fx:id="btnSalvar" alignment="CENTER" layoutX="206.0" layoutY="332.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="196.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #5162FF; -fx-border-width: 4; -fx-background-radius: 5; -fx-border-radius: 5;" text="SALVAR" textFill="#656060">
                <font>
                   <Font name="Arial" size="21.0" />
                </font>
