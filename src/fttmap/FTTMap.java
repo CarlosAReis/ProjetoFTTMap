@@ -30,8 +30,7 @@ public class FTTMap extends Application {
 
         final Scene scene = new Scene(root);
         
-//        System.out.println((new File(".").getCanonicalPath()) + "\\src\\images\\tm_logo.png");
-//        stage.getIcons().add(new Image((new File(".").getCanonicalPath()) + "\\src\\images\\tm_logo.png"));
+        stage.getIcons().add(new Image("file:" + new File(".").getCanonicalPath() + "\\src\\images\\tm_logo.png"));
 
         stage.setScene(scene);
         stage.show();
