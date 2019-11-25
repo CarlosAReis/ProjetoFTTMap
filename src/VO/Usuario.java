@@ -6,7 +6,8 @@
 package VO;
 
 import Comuns.CampoNoBanco;
-import Enums.Category;
+import Comuns.Criptografia;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,24 +15,38 @@ import Enums.Category;
  */
 public class Usuario extends Entity {
     
+    @CampoNoBanco(nome = "RA", chave = true)
+    private String RA;
+    
     @CampoNoBanco(nome = "Nome", chave = false)
     private String Nome;
-    @CampoNoBanco(nome = "Sobrenome", chave = false)
-    private String Sobrenome;
-    
-    private Category Categoria;
-    
-    private Curso Curso;
-    
-    private Semestre Semestre;
-    
-    @CampoNoBanco(nome = "Username", chave = true)
-    private String Username;
     
     @CampoNoBanco(nome = "Senha", chave = false)
     private String Senha;
-
-
+    
+    @CampoNoBanco(nome = "Categoria", chave = false)
+    private String Categoria;
+    
+    @CampoNoBanco(nome = "Curso", chave = false)
+    private String Curso;
+    
+    @CampoNoBanco(nome = "Semestre", chave = false)
+    private int Semestre;
+    
+    private static Usuario currentUser;
+ 
+    public Usuario() {
+    }
+ 
+    public static synchronized Usuario getCurrentUser() {
+        if (currentUser == null)
+            currentUser = new Usuario();
+ 
+        return currentUser;
+    }
+    public static void setCurrentUser(Usuario u){
+        currentUser = u;
+    }
     public String getNome() {
         return Nome;
     }
@@ -40,44 +55,36 @@ public class Usuario extends Entity {
         this.Nome = Nome;
     }
 
-    public String getSobrenome() {
-        return Sobrenome;
-    }
-
-    public void setSobrenome(String Sobrenome) {
-        this.Sobrenome = Sobrenome;
-    }
-
-    public Category getCategoria() {
+    public String getCategoria() {
         return Categoria;
     }
 
-    public void setCategoria(Category Categoria) {
+    public void setCategoria(String Categoria) {
         this.Categoria = Categoria;
     }
 
-    public Curso getCurso() {
+    public String getCurso() {
         return Curso;
     }
 
-    public void setCurso(Curso Curso) {
+    public void setCurso(String Curso) {
         this.Curso = Curso;
     }
 
-    public Semestre getSemestre() {
+    public int getSemestre() {
         return Semestre;
     }
 
-    public void setSemestre(Semestre Semestre) {
+    public void setSemestre(int Semestre) {
         this.Semestre = Semestre;
     }
     
-    public String getUsername() {
-        return  Username;
+    public String getRA() {
+        return  RA;
     }
     
-    public void setUsername(String Username) {
-        this.Username = Username;
+    public void setRA(String RA) {
+        this.RA = RA;
     }
 
     public String getSenha() {
@@ -87,5 +94,20 @@ public class Usuario extends Entity {
     public void setSenha(String Senha) {
         this.Senha = Senha;
     }
+    public String getDecriptedPassword(){
+        return Criptografia.decode(getSenha());
+    }
+   
+    public ArrayList<Object> getUserArray(){
+        ArrayList<Object> UserSettings = new ArrayList<>();
+        UserSettings.add(getRA());
+        UserSettings.add(getNome());
+        UserSettings.add(Criptografia.encode(getSenha()));
+        UserSettings.add(getCategoria());
+        UserSettings.add(getCurso());
+        UserSettings.add(getSemestre());
+        return UserSettings;
+    }
+    
     
 }
