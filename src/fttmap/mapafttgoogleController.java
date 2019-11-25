@@ -34,6 +34,7 @@ import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import org.joda.time.DateTime;
 
 /**
@@ -103,7 +104,7 @@ public class mapafttgoogleController implements Initializable {
                 if (timeBegin != null && timeEnd != null) {
 //            System.out.println("now => " + now.toString());
                     if (now.isBefore(timeBegin.getTime())) {
-                        numeroSala = dayMatrix[i][Excel.sala];
+                        sala = numeroSala = dayMatrix[i][Excel.sala];
                         aula = dayMatrix[i][Excel.disciplina];
                         professor = dayMatrix[i][Excel.professor];
                         horario = dayMatrix[i][Excel.horaInicio];
@@ -132,6 +133,8 @@ public class mapafttgoogleController implements Initializable {
                     Background bg = new Background(backgroundFill);
                     pn.setBackground(bg);
 //                    pn.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
+                    lb.setBackground(bg);
+                       lb.setTextFill(Paint.valueOf("White"));
                     lb.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
                     Pane blocoPane = getBlocoPaneByClassroomNumber(numeroSala);
                     if (blocoPane != null) {
