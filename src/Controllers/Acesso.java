@@ -5,7 +5,7 @@
  */
 package Controllers;
 
-import Enums.Category;
+import Comuns.Criptografia;
 import Enums.Entities;
 import Repository.GenerateRepository;
 import Repository.Repository;
@@ -17,7 +17,8 @@ import VO.Usuario;
  */
 public class Acesso {
     private boolean validaSenha(String senhaRepositorio, String senhaDigitada){
-        //TODO DESENCRIPTAR SENHA ANTES DE COMPARAR
+        
+        senhaRepositorio = Criptografia.decode(senhaRepositorio);
         
         return (senhaRepositorio.equals(senhaDigitada)); 
     }
@@ -25,7 +26,8 @@ public class Acesso {
     private Usuario validaUsuarioBase(Usuario user){
         
         Repository repositorio = GenerateRepository.generateRepository();        
-        Usuario usuario = (Usuario)repositorio.Find(user.getUsername(), Entities.USUARIO);
+        Usuario usuario = (Usuario)repositorio.find(user.getRA(), Entities.USUARIO);
+        Usuario.setCurrentUser(usuario);
         return usuario;
     }
     public boolean validaUsuario(Usuario user) {
@@ -44,7 +46,7 @@ public class Acesso {
         Usuario usuario = validaUsuarioBase(user);
         if (usuario != null)
         {
-            retorno = validaSenha(usuario.getSenha(), user.getSenha()) && user.getCategoria().equals(Category.ADMINISTRADOR);
+            retorno = validaSenha(usuario.getSenha(), user.getSenha()) && usuario.getCategoria().equals("Administrador");
         }
         return retorno;
     }
