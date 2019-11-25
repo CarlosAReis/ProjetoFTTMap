@@ -7,6 +7,7 @@ package Repository;
 
 import Enums.Entities;
 import VO.Entity;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,8 +15,10 @@ import VO.Entity;
  */
 public abstract class Repository {
   
-  public abstract Entity Select(int id, Entities entityType);
-  public abstract Entity Find(String code, Entities entityType);
-  public abstract boolean Update(String code, Entities entityType);
-  public abstract boolean Delete(String code, Entities entityType);
+  public abstract Entity select(int id, Entities entityType);
+  public abstract Entity find(String code, Entities entityType);
+  public abstract boolean update(String value,String Key, Entities entityType);
+  public abstract boolean delete(String code, Entities entityType);
+  public abstract boolean insert(String code, Entities entityType);
+  public abstract boolean insert(Object obj, Entities entityType);
 }
