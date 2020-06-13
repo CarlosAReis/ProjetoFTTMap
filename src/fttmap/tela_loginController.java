@@ -6,6 +6,7 @@
 package fttmap;
 
 import Controllers.Acesso;
+import Controllers.ComunsController;
 import VO.Usuario;
 import java.io.IOException;
 import javafx.application.Platform;
@@ -15,6 +16,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 
@@ -27,6 +30,12 @@ public class tela_loginController {
     
     private final Stage stage = new Stage();
     private boolean logado;
+    @FXML
+    private TextField tbRA;
+    
+    @FXML
+    private PasswordField tbSenha;
+    
     
     @FXML
     private void btnEntrar_Click(javafx.scene.input.MouseEvent event) throws IOException {
@@ -50,12 +59,8 @@ public class tela_loginController {
     }
     private Usuario getUser(){
         Usuario user = new Usuario();
-        //user.setUsername(txt.getText());
-        //user.setSenha(txtSenha.getText());
-        Acesso acesso = new Acesso();
-        logado =  acesso.validaUsuarioAdmin(user);
-        stage.close();
-        
+        user.setRA(tbRA.getText());
+        user.setSenha(tbSenha.getText());
         return user;
     }
     private void showMenu() throws IOException{ 
@@ -72,12 +77,7 @@ public class tela_loginController {
     
     private void doLogin(boolean asAdmin) throws IOException{
         
-        showMenu();
-        /*
-        logado =  LoginController.doLogin(asAdmin, getUser());
-=======
-        logado = true;//LoginController.DoLogin(asAdmin, GetUser());
->>>>>>> 82af0a181ac6ffa4b5246b7ced9636bb88232507
+        logado =  ComunsController.doLogin(asAdmin, getUser());
         
         if(logado){
            showMenu();
@@ -85,7 +85,6 @@ public class tela_loginController {
         else{
             showErrorMessage();
         }
-                */
     }
     
 }

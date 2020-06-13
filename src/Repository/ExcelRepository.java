@@ -7,6 +7,7 @@ package Repository;
 
 import Enums.Entities;
 import VO.Entity;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,22 +16,38 @@ import VO.Entity;
 public class ExcelRepository extends Repository {
 
     @Override
-    public Entity Select(int id, Entities entityType) {
+    public Entity select(int id, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Entity Find(String code, Entities entityType) {
+    public Entity find(String code, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean Update(String code, Entities entityType) {
+    public boolean delete(String code, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean Delete(String code, Entities entityType) {
+    public boolean insert(String code, Entities entityType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean update(String key, String Value, Entities entityType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
+    @Override
+    public boolean insert(Object obj, Entities entityType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void verifyDatabase(Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

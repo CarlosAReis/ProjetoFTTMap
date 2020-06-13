@@ -7,18 +7,15 @@ package fttmap;
 
 import DAO.Excel;
 import Service.ExcelController;
-import com.sun.java.accessibility.util.EventID;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
@@ -27,13 +24,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import org.joda.time.DateTime;
 
 /**
@@ -103,7 +100,7 @@ public class mapafttgoogleController implements Initializable {
                 if (timeBegin != null && timeEnd != null) {
 //            System.out.println("now => " + now.toString());
                     if (now.isBefore(timeBegin.getTime())) {
-                        numeroSala = dayMatrix[i][Excel.sala];
+                        sala = numeroSala = dayMatrix[i][Excel.sala];
                         aula = dayMatrix[i][Excel.disciplina];
                         professor = dayMatrix[i][Excel.professor];
                         horario = dayMatrix[i][Excel.horaInicio];
@@ -132,6 +129,8 @@ public class mapafttgoogleController implements Initializable {
                     Background bg = new Background(backgroundFill);
                     pn.setBackground(bg);
 //                    pn.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
+                    lb.setBackground(bg);
+                    lb.setTextFill(Paint.valueOf("White"));
                     lb.addEventHandler(MouseEvent.MOUSE_CLICKED, new GetIdEventHandler());
                     Pane blocoPane = getBlocoPaneByClassroomNumber(numeroSala);
                     if (blocoPane != null) {

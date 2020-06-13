@@ -6,7 +6,7 @@
 package fttmap;
 
 import Service.ExcelController;
-import java.io.File;
+import VO.Usuario;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,7 +21,6 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -120,8 +119,9 @@ public class menuController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         
-        boolean userIsAdmin = false;
+        boolean userIsAdmin = Usuario.getCurrentUser().getCategoria().equals("Administrador");
         pnCurso.setVisible(false);
+        btnCadastrarAluno.setVisible(userIsAdmin);
         
         if (userIsAdmin) {
             pnCurso.setVisible(true);
@@ -130,7 +130,7 @@ public class menuController implements Initializable {
             cbCurso.getItems().add("EA");
             cbCurso.getItems().add("ADM");
         }
-        
+            
         cbSemestre.getItems().add("1");
         cbSemestre.getItems().add("2");
         cbSemestre.getItems().add("3");
@@ -139,6 +139,8 @@ public class menuController implements Initializable {
         cbSemestre.getItems().add("6");
         cbSemestre.getItems().add("7");
         cbSemestre.getItems().add("8");
+        cbSemestre.getItems().add("9");
+        cbSemestre.getItems().add("10");
         
     }
     

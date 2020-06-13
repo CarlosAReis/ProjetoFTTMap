@@ -21,12 +21,12 @@ import java.util.logging.Logger;
 public class MySQLRepository extends Repository {
 
     @Override
-    public Entity Select(int id, Entities entityType) {
+    public Entity select(int id, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Entity Find(String code, Entities entityType) {
+    public Entity find(String code, Entities entityType) {
         DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
         Entity entidade = null;
         try {
@@ -38,13 +38,54 @@ public class MySQLRepository extends Repository {
     }
 
     @Override
-    public boolean Update(String code, Entities entityType) {
+    public boolean update(String value,String key, Entities entityType) {
+        DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+        try {
+            dao.update(value,key);
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean delete(String code, Entities entityType) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public boolean Delete(String code, Entities entityType) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean insert(String code, Entities entityType) {
+        DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+        try {
+            dao.insert(code);
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    @Override
+    public boolean insert(Object obj, Entities entityType) {
+        DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+        try {
+            dao.insert(obj);
+            return true;
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
+        }
+    }
+
+    @Override
+    public void verifyDatabase(Entities entityType) {
+         DAO dao = GenerateDAO.Fabrica(entityType, Repositories.MYSQL);
+         try {
+            dao.verifyDatabase();
+        } catch (SQLException ex) {
+            Logger.getLogger(MySQLRepository.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }
